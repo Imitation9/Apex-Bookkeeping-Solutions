@@ -1,1 +1,29 @@
+.glass {
 
+  background: rgba(255,255,255,.82);
+
+  backdrop-filter: blur(16px);
+
+  border: 1px solid rgba(255,255,255,.5);
+
+}
+
+.shadow-premium {
+
+  box-shadow: var(--shadow-lg);
+
+}
+
+.gradient-text {
+
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-accent)
+  );
+
+  -webkit-background-clip:text;
+
+  -webkit-text-fill-color:transparent;
+
+}
