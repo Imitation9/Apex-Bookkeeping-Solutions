@@ -3,6 +3,7 @@ import TrustBar from "../components/sections/Hero/TrustBar";
 import Services from "../components/sections/Services/Services";
 import About from "../components/sections/About/About";
 import Audiences from "../components/sections/Audiences/Audiences";
+import Process from "../components/sections/Process/Process";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Services />
       <About />
       <Audiences />
+      <Process />
     </>
   );
 }
