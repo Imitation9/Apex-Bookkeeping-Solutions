@@ -1,22 +1,7 @@
 export const navigation = [
-  {
-    label: "Services",
-    href: "#services",
-  },
-  {
-    label: "Industries",
-    href: "#industries",
-  },
-  {
-    label: "About",
-    href: "#about",
-  },
-  {
-    label: "Process",
-    href: "#process",
-  },
-  {
-    label: "Contact",
-    href: "#contact",
-  },
+  { label: "Services", href: "#services" },
+  { label: "Who We Serve", href: "#industries" },
+  { label: "Why Apex", href: "#about" },
+  { label: "Our Process", href: "#process" },
+  { label: "Contact", href: "#contact" },
 ];
