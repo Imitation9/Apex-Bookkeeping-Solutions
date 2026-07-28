@@ -1,7 +1,9 @@
 @import url(
 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap'
 );
-
+@import "./variables.css";
+@import "./animations.css";
+@import "./utilities.css";
 
 @tailwind base;
 @tailwind components;
@@ -12,30 +14,30 @@ html{
 scroll-behavior:smooth;
 }
 
+body {
 
-body{
+  margin:0;
 
-margin:0;
+  font-family:Inter,sans-serif;
 
-font-family:
-Inter,
-sans-serif;
+  color:var(--color-text);
 
-background:#F8FAFC;
+  background:var(--color-background);
 
-color:#1E293B;
+  -webkit-font-smoothing:antialiased;
+
+  text-rendering:optimizeLegibility;
 
 }
-
 
 h1,
 h2,
 h3,
 h4{
 
-font-family:
-"Playfair Display",
-serif;
+color:var(--color-heading);
+
+letter-spacing:-0.03em;
 
 }
 
