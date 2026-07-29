@@ -54,4 +54,3 @@ jobs:
       - name: Deploy website
         id: deployment
         uses: actions/deploy-pages@v4
-Add GitHub Pages deployment workflow
