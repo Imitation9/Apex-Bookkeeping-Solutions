@@ -17,7 +17,7 @@ export default function Navigation() {
         </a>
       ))}
 
-      <Button href="#contact">
+      <Button href="#consultation">
         Free Consultation
       </Button>
     </nav>
