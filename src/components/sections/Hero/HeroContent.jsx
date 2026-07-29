@@ -8,27 +8,19 @@ export default function HeroContent() {
 
         Accurate • Reliable • Empowering Your Success
 
-      </p>
+<h1 className="font-serif text-5xl font-bold leading-[1.08] tracking-tight text-[#163047] sm:text-6xl lg:text-7xl">
+  Financial Clarity.
+  <span className="block text-[#B88A2E]">
+    Confident Decisions.
+  </span>
+  Sustainable Growth.
+</h1>
 
-      <h1 className="max-w-2xl text-5xl font-bold leading-tight lg:text-7xl">
-
-        Bookkeeping Built
-        for Organizations
-        That Want to Grow.
-
-      </h1>
-
-      <p className="mt-8 max-w-xl text-xl leading-9 text-slate-600">
-
-        Professional bookkeeping,
-        payroll, cleanup,
-        reconciliations and
-        financial reporting designed
-        to help nonprofits,
-        small businesses,
-        and startups succeed.
-
-      </p>
+<p className="mt-7 max-w-2xl text-lg leading-8 text-slate-600">
+  Professional bookkeeping and financial reporting for nonprofit
+  organizations, small businesses, and startups—delivered with accuracy,
+  integrity, and more than 23 years of financial leadership.
+</p>
 
       <div className="mt-10 flex flex-wrap gap-5">
 
