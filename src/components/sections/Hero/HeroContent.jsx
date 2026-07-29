@@ -2,45 +2,37 @@ import Button from "../../UI/Button/Button";
 
 export default function HeroContent() {
   return (
-    <div>
+    <div className="max-w-3xl">
+      <p className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-amber-700">
+        Trusted bookkeeping support
+      </p>
 
-      <p className="mb-6 font-semibold uppercase tracking-[.3em] text-apex-gold">
+      <h1 className="text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
+        Clear books. Confident decisions. Stronger organizations.
+      </h1>
 
-        Accurate • Reliable • Empowering Your Success
+      <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">
+        Apex Bookkeeping Solutions helps nonprofits, startups, and small
+        businesses maintain accurate financial records, streamline QuickBooks,
+        and gain the clarity needed to move forward with confidence.
+      </p>
 
-<h1 className="font-serif text-5xl font-bold leading-[1.08] tracking-tight text-[#163047] sm:text-6xl lg:text-7xl">
-  Financial Clarity.
-  <span className="block text-[#B88A2E]">
-    Confident Decisions.
-  </span>
-  Sustainable Growth.
-</h1>
+      <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+        <Button href="#contact">Schedule a Free Consultation</Button>
 
-<p className="mt-7 max-w-2xl text-lg leading-8 text-slate-600">
-  Professional bookkeeping and financial reporting for nonprofit
-  organizations, small businesses, and startups—delivered with accuracy,
-  integrity, and more than 23 years of financial leadership.
-</p>
-
-      <div className="mt-10 flex flex-wrap gap-5">
-
-        <Button href="#contact">
-
-          Schedule Consultation
-
-        </Button>
-
-        <Button
+        <a
           href="#services"
-          variant="outline"
+          className="inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-6 py-3 font-semibold text-slate-800 transition hover:border-slate-400 hover:bg-slate-50"
         >
-
-          Explore Services
-
-        </Button>
-
+          Explore Our Services
+        </a>
       </div>
 
+      <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm font-medium text-slate-600">
+        <span>23+ years of experience</span>
+        <span>QuickBooks ProAdvisor</span>
+        <span>Nonprofit-focused support</span>
+      </div>
     </div>
   );
 }
