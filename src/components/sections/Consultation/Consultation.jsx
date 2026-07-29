@@ -1,5 +1,5 @@
-import Section from "../../ui/Section/Section";
-import Heading from "../../ui/Heading/Heading";
+import Section from "../../UI/Section/Section";
+import Heading from "../../UI/Heading/Heading";
 
 import ConsultationCard from "./ConsultationCard";
 import ContactDetails from "./ContactDetails";
