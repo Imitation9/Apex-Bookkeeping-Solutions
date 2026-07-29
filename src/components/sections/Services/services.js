@@ -1,47 +1,61 @@
 import {
-  BookOpen,
-  BriefcaseBusiness,
-  ClipboardCheck,
+  BookOpenCheck,
+  BrushCleaning,
+  Calculator,
   Landmark,
-  Receipt,
-  BarChart3,
+  ReceiptText,
+  WalletCards,
+  ChartNoAxesCombined,
+  ClipboardCheck,
 } from "lucide-react";
 
 export const services = [
   {
-    icon: BookOpen,
-    title: "Bookkeeping",
+    title: "Monthly Bookkeeping",
     description:
-      "Timely, accurate bookkeeping that keeps your financial records organized and decision-ready.",
+      "Accurate, organized monthly bookkeeping that keeps your financial records current and gives you a clear view of your organization’s performance.",
+    icon: BookOpenCheck,
   },
   {
-    icon: ClipboardCheck,
     title: "Book Cleanup",
     description:
-      "Bring months—or even years—of financial records back into order with confidence.",
+      "Thorough cleanup of incomplete, inaccurate, or overdue books so you can move forward with dependable financial information.",
+    icon: BrushCleaning,
   },
   {
-    icon: Receipt,
-    title: "Payroll",
+    title: "QuickBooks Setup",
     description:
-      "Reliable payroll processing and reporting to help you stay compliant and keep your team paid accurately.",
+      "Professional QuickBooks Online setup designed around your organization, reporting needs, and day-to-day workflow.",
+    icon: Calculator,
   },
   {
-    icon: BarChart3,
+    title: "Payroll Support",
+    description:
+      "Reliable payroll support that helps keep employee records, payroll transactions, and related reporting organized.",
+    icon: Landmark,
+  },
+  {
+    title: "Accounts Payable & Receivable",
+    description:
+      "Organized management of bills, invoices, customer balances, and vendor activity to support stronger cash flow.",
+    icon: WalletCards,
+  },
+  {
     title: "Financial Reporting",
     description:
-      "Clear financial reports that provide meaningful insight into the health of your organization.",
+      "Clear, timely financial reports that help business owners and nonprofit leaders understand results and make informed decisions.",
+    icon: ChartNoAxesCombined,
   },
   {
-    icon: Landmark,
-    title: "Nonprofit Accounting",
+    title: "Budgeting & Forecasting",
     description:
-      "Specialized bookkeeping and financial reporting tailored to nonprofits, grants, and fund accounting.",
+      "Practical budgeting and forecasting support to help you plan responsibly, monitor performance, and prepare for what comes next.",
+    icon: ClipboardCheck,
   },
   {
-    icon: BriefcaseBusiness,
-    title: "QuickBooks Consulting",
+    title: "1099 Support",
     description:
-      "QuickBooks Online setup, optimization, troubleshooting, and ongoing support from a Gold ProAdvisor.",
+      "Organized contractor tracking and 1099 preparation support to reduce year-end stress and improve reporting accuracy.",
+    icon: ReceiptText,
   },
 ];
