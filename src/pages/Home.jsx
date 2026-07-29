@@ -4,6 +4,7 @@ import Services from "../components/sections/Services/Services";
 import About from "../components/sections/About/About";
 import Audiences from "../components/sections/Audiences/Audiences";
 import Process from "../components/sections/Process/Process";
+import FAQ from "../components/sections/FAQ/FAQ";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <About />
       <Audiences />
       <Process />
+      <FAQ />
     </>
   );
 }
