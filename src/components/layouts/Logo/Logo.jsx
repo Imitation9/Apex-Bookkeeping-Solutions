@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
+
 export default function Logo() {
   return (
-    <a
-      href="/"
+    <Link
+      to="/"
       className="select-none"
-      aria-label="Apex Bookkeeping Solutions"
+      aria-label="Apex Bookkeeping Solutions home"
     >
       <div className="leading-tight">
         <div className="text-2xl font-black tracking-wide text-apex-navy">
@@ -14,6 +16,6 @@ export default function Logo() {
           Bookkeeping Solutions
         </div>
       </div>
-    </a>
+    </Link>
   );
 }
