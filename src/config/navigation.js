@@ -5,7 +5,7 @@ export const navigation = [
   },
   {
     label: "Who We Serve",
-    href: "#industries",
+    href: "#who-we-serve",
   },
   {
     label: "Why Apex",
@@ -21,6 +21,6 @@ export const navigation = [
   },
   {
     label: "Schedule",
-    href: "#contact",
+    href: "#consultation",
   },
 ];
