@@ -1,10 +1,53 @@
+@import "tailwindcss";
+
+/* ==========================================================
+   Apex Bookkeeping Solutions Global Styles
+   ========================================================== */
+
+:root {
+  --color-primary: #12314e;
+  --color-secondary: #d4af37;
+  --color-background: #f8fafc;
+  --color-surface: #ffffff;
+  --color-text: #1f2937;
+  --color-muted: #6b7280;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: var(--color-text);
+  background-color: var(--color-background);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
-::selection {
-  background: var(--color-accent);
-  color: white;
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--color-background);
+  color: var(--color-text);
 }
 
 img {
@@ -12,7 +55,16 @@ img {
   max-width: 100%;
 }
 
-button,
 a {
-  transition: all 0.25s ease;
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+#root {
+  min-height: 100vh;
 }
