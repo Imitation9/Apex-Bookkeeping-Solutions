@@ -17,7 +17,7 @@ export default function MobileMenu() {
         aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
         aria-expanded={isOpen}
         aria-controls="mobile-navigation"
-        className="rounded-lg p-2 transition hover:bg-slate-100"
+        className="relative z-[60] rounded-lg p-2 transition hover:bg-slate-100"
       >
         {isOpen ? (
           <svg
@@ -50,9 +50,9 @@ export default function MobileMenu() {
         <nav
           id="mobile-navigation"
           aria-label="Mobile navigation"
-          className="absolute left-0 right-0 top-full border-t border-slate-200 bg-white px-6 py-6 shadow-lg"
+          className="absolute left-0 right-0 top-full z-[60] border-t border-slate-200 bg-white px-6 py-6 shadow-xl"
         >
-          <div className="flex flex-col gap-5">
+          <div className="mx-auto flex max-w-7xl flex-col gap-5">
             <Link
               to="/"
               onClick={closeMenu}
