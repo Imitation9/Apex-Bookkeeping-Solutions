@@ -19,8 +19,4 @@ export const navigation = [
     label: "FAQ",
     href: "#faq",
   },
-  {
-    label: "Schedule",
-    href: "#consultation",
-  },
 ];
