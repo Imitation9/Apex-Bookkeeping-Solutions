@@ -1,4 +1,4 @@
-import Button from "../../ui/Button/Button";
+import Button from "../../UI/Button/Button";
 import { navigation } from "../../../config/navigation";
 
 export default function Navigation() {
