@@ -1,64 +1,18 @@
-@import url(
-'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap'
-);
-@import "./variables.css";
-@import "./animations.css";
-@import "./utilities.css";
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-html{
-scroll-behavior:smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-body {
-
-  margin:0;
-
-  font-family:Inter,sans-serif;
-
-  color:var(--color-text);
-
-  background:var(--color-background);
-
-  -webkit-font-smoothing:antialiased;
-
-  text-rendering:optimizeLegibility;
-
+::selection {
+  background: var(--color-accent);
+  color: white;
 }
 
-h1,
-h2,
-h3,
-h4{
-
-color:var(--color-heading);
-
-letter-spacing:-0.03em;
-
+img {
+  display: block;
+  max-width: 100%;
 }
 
-
-*{
-
-box-sizing:border-box;
-
-}
-
-
-.container{
-
-width:100%;
-
-max-width:1280px;
-
-margin:auto;
-
-padding-left:1.5rem;
-
-padding-right:1.5rem;
-
+button,
+a {
+  transition: all 0.25s ease;
 }
