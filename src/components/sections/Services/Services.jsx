@@ -1,5 +1,5 @@
-import Heading from "../../ui/Heading/Heading";
-import Section from "../../ui/Section/Section";
+import Heading from "../../UI/Heading/Heading";
+import Section from "../../UI/Section/Section";
 
 import ServiceCard from "./ServiceCard";
 
