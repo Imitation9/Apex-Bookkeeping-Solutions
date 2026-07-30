@@ -1,34 +1,83 @@
-import useInView from "../../../hooks/useInView";
+import { useEffect, useRef, useState } from "react";
+
+const animations = {
+  up: "reveal-up",
+  down: "reveal-down",
+  left: "reveal-left",
+  right: "reveal-right",
+  fade: "",
+};
 
 export default function Reveal({
   children,
-  className = "",
-  delay = 0,
-  direction = "up",
   as: Component = "div",
+  animation = "up",
+  delay = 0,
+  threshold = 0.2,
+  rootMargin = "0px 0px -40px 0px",
+  once = true,
+  className = "",
+  ...props
 }) {
-  const { ref, isInView } = useInView();
+  const elementRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
 
-  const directionClasses = {
-    up: "reveal-up",
-    down: "reveal-down",
-    left: "reveal-left",
-    right: "reveal-right",
-    none: "",
-  };
+  useEffect(() => {
+    const element = elementRef.current;
+
+    if (!element) {
+      return undefined;
+    }
+
+    if (
+      typeof window === "undefined" ||
+      !("IntersectionObserver" in window)
+    ) {
+      setIsVisible(true);
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+
+          if (once) {
+            observer.unobserve(entry.target);
+          }
+        } else if (!once) {
+          setIsVisible(false);
+        }
+      },
+      {
+        threshold,
+        rootMargin,
+      },
+    );
+
+    observer.observe(element);
+
+    return () => observer.disconnect();
+  }, [once, rootMargin, threshold]);
+
+  const animationClass =
+    animations[animation] ?? animations.up;
 
   return (
     <Component
-      ref={ref}
+      ref={elementRef}
       className={[
         "reveal",
-        directionClasses[direction] ?? directionClasses.up,
-        isInView ? "is-visible" : "",
+        animationClass,
+        isVisible ? "is-visible" : "",
         className,
       ]
         .filter(Boolean)
         .join(" ")}
-      style={{ "--reveal-delay": `${delay}ms` }}
+      style={{
+        "--reveal-delay": `${delay}ms`,
+      }}
+      {...props}
     >
       {children}
     </Component>
