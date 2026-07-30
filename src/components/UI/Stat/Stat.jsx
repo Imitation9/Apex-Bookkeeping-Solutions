@@ -1,7 +1,7 @@
 import AnimatedNumber from "../AnimatedNumber/AnimatedNumber";
 
 export default function Stat({
-  value,
+  value = 0,
   label,
   description,
   prefix = "",
@@ -13,15 +13,13 @@ export default function Stat({
   return (
     <div
       className={[
-        "relative",
-        "border-l-2 border-apex-gold",
-        "pl-5 sm:pl-6",
+        "relative border-l-2 border-apex-gold pl-5 sm:pl-6",
         className,
       ]
         .filter(Boolean)
         .join(" ")}
     >
-      <div className="font-serif text-4xl font-bold tracking-tight text-apex-navy sm:text-5xl">
+      <div className="text-4xl font-bold tracking-tight text-apex-navy sm:text-5xl">
         <AnimatedNumber
           value={value}
           prefix={prefix}
@@ -31,9 +29,11 @@ export default function Stat({
         />
       </div>
 
-      <p className="mt-2 font-semibold text-slate-900">
-        {label}
-      </p>
+      {label && (
+        <p className="mt-2 font-semibold text-slate-900">
+          {label}
+        </p>
+      )}
 
       {description && (
         <p className="mt-2 max-w-xs text-sm leading-6 text-slate-600">
