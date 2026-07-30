@@ -1,93 +1,67 @@
 import { useEffect, useRef, useState } from "react";
 
-function formatValue(value, decimals) {
-  return Number(value).toLocaleString("en-US", {
-    minimumFractionDigits: decimals,
-    maximumFractionDigits: decimals,
-  });
-}
-
 export default function AnimatedNumber({
-  value,
+  value = 0,
   duration = 1400,
   delay = 0,
   decimals = 0,
   prefix = "",
   suffix = "",
-  threshold = 0.4,
   className = "",
 }) {
-  const elementRef = useRef(null);
+  const ref = useRef(null);
   const frameRef = useRef(null);
   const timeoutRef = useRef(null);
-  const hasAnimatedRef = useRef(false);
-
-  const numericValue = Number(value);
-  const safeValue = Number.isFinite(numericValue) ? numericValue : 0;
-
   const [displayValue, setDisplayValue] = useState(0);
 
+  const targetValue = Number(value) || 0;
+
   useEffect(() => {
-    const element = elementRef.current;
+    const element = ref.current;
 
-    if (!element) {
-      return undefined;
-    }
+    if (!element) return undefined;
 
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
-
-    if (
-      prefersReducedMotion ||
-      !("IntersectionObserver" in window)
-    ) {
-      setDisplayValue(safeValue);
-      hasAnimatedRef.current = true;
-      return undefined;
-    }
-
-    const animate = () => {
-      if (hasAnimatedRef.current) {
-        return;
-      }
-
-      hasAnimatedRef.current = true;
-
+    const startAnimation = () => {
       timeoutRef.current = window.setTimeout(() => {
-        const startTime = performance.now();
+        const startTime = window.performance.now();
 
-        const update = (currentTime) => {
-          const elapsed = currentTime - startTime;
-          const progress = Math.min(elapsed / duration, 1);
+        const animate = (currentTime) => {
+          const progress = Math.min(
+            (currentTime - startTime) / duration,
+            1,
+          );
 
-          const easedProgress =
-            1 - Math.pow(1 - progress, 3);
+          const eased = 1 - Math.pow(1 - progress, 3);
 
-          setDisplayValue(safeValue * easedProgress);
+          setDisplayValue(targetValue * eased);
 
           if (progress < 1) {
             frameRef.current =
-              window.requestAnimationFrame(update);
+              window.requestAnimationFrame(animate);
           } else {
-            setDisplayValue(safeValue);
+            setDisplayValue(targetValue);
           }
         };
 
         frameRef.current =
-          window.requestAnimationFrame(update);
+          window.requestAnimationFrame(animate);
       }, delay);
     };
+
+    if (!("IntersectionObserver" in window)) {
+      setDisplayValue(targetValue);
+      return undefined;
+    }
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          animate();
-          observer.unobserve(entry.target);
+          startAnimation();
+          observer.disconnect();
         }
       },
       {
-        threshold,
+        threshold: 0.25,
       },
     );
 
@@ -104,19 +78,17 @@ export default function AnimatedNumber({
         window.clearTimeout(timeoutRef.current);
       }
     };
-  }, [delay, duration, safeValue, threshold]);
+  }, [delay, duration, targetValue]);
+
+  const formattedValue = displayValue.toLocaleString("en-US", {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals,
+  });
 
   return (
-    <span
-      ref={elementRef}
-      className={className}
-      aria-label={`${prefix}${formatValue(
-        safeValue,
-        decimals,
-      )}${suffix}`}
-    >
+    <span ref={ref} className={className}>
       {prefix}
-      {formatValue(displayValue, decimals)}
+      {formattedValue}
       {suffix}
     </span>
   );
