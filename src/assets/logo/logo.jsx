@@ -1,17 +1,26 @@
-import logo from "../../../assets/logo/apex-logo.png";
+import { Link } from "react-router-dom";
 
 export default function Logo() {
   return (
-    <a
-      href="/"
-      aria-label="Apex Bookkeeping Solutions"
-      className="flex items-center"
+    <Link
+      to="/"
+      aria-label="Apex Bookkeeping Solutions home"
+      className="flex items-center gap-3"
     >
       <img
-        src={logo}
+        src={`${import.meta.env.BASE_URL}images/apex-logo.png`}
         alt="Apex Bookkeeping Solutions"
-        className="h-14 w-auto transition-transform duration-300 hover:scale-105"
+        className="h-12 w-auto object-contain sm:h-14"
       />
-    </a>
+
+      <div className="hidden sm:block">
+        <p className="text-lg font-bold leading-tight text-apex-blue">
+          Apex Bookkeeping Solutions
+        </p>
+        <p className="text-xs font-medium tracking-wide text-slate-600">
+          Clarity. Accuracy. Confidence.
+        </p>
+      </div>
+    </Link>
   );
 }
