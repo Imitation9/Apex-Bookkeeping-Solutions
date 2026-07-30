@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+
 import { navigation } from "../../../config/navigation";
 
 export default function MobileMenu() {
@@ -9,79 +10,119 @@ export default function MobileMenu() {
     setIsOpen(false);
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        closeMenu();
+      }
+    };
+
+    const handleEscape = (event) => {
+      if (event.key === "Escape") {
+        closeMenu();
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("keydown", handleEscape);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("keydown", handleEscape);
+    };
+  }, []);
+
   return (
     <div className="lg:hidden">
       <button
         type="button"
         onClick={() => setIsOpen((open) => !open)}
-        aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+        aria-label={
+          isOpen
+            ? "Close navigation menu"
+            : "Open navigation menu"
+        }
         aria-expanded={isOpen}
         aria-controls="mobile-navigation"
-        className="relative z-[60] rounded-lg p-2 transition hover:bg-slate-100"
+        className="relative z-[60] inline-flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-white text-apex-blue shadow-sm transition-colors hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apex-gold focus-visible:ring-offset-2"
       >
-        {isOpen ? (
-          <svg
-            width="28"
-            height="28"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            aria-hidden="true"
-          >
-            <path d="M6 6l12 12M18 6L6 18" />
-          </svg>
-        ) : (
-          <svg
-            width="28"
-            height="28"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            aria-hidden="true"
-          >
-            <path d="M4 7h16M4 12h16M4 17h16" />
-          </svg>
-        )}
+        <span className="sr-only">
+          {isOpen ? "Close menu" : "Open menu"}
+        </span>
+
+        <span
+          className={[
+            "absolute h-0.5 w-5 bg-current transition duration-300",
+            isOpen ? "rotate-45" : "-translate-y-1.5",
+          ].join(" ")}
+        />
+
+        <span
+          className={[
+            "absolute h-0.5 w-5 bg-current transition duration-300",
+            isOpen ? "opacity-0" : "opacity-100",
+          ].join(" ")}
+        />
+
+        <span
+          className={[
+            "absolute h-0.5 w-5 bg-current transition duration-300",
+            isOpen ? "-rotate-45" : "translate-y-1.5",
+          ].join(" ")}
+        />
       </button>
 
-      {isOpen && (
+      <div
+        id="mobile-navigation"
+        className={[
+          "absolute inset-x-0 top-full overflow-hidden border-t bg-white shadow-xl transition-all duration-300",
+          isOpen
+            ? "visible max-h-[600px] border-slate-200 opacity-100"
+            : "invisible pointer-events-none max-h-0 border-transparent opacity-0",
+        ].join(" ")}
+      >
         <nav
-          id="mobile-navigation"
           aria-label="Mobile navigation"
-          className="absolute left-0 right-0 top-full z-[60] border-t border-slate-200 bg-white px-6 py-6 shadow-xl"
+          className="mx-auto flex max-w-7xl flex-col px-5 py-5 sm:px-6"
         >
-          <div className="mx-auto flex max-w-7xl flex-col gap-5">
-            <Link
-              to="/"
-              onClick={closeMenu}
-              className="font-medium text-slate-700 transition-colors hover:text-apex-blue"
-            >
-              Home
-            </Link>
+          <Link
+            to="/"
+            onClick={closeMenu}
+            className="rounded-lg px-3 py-3 font-semibold text-slate-800 transition-colors hover:bg-slate-100 hover:text-apex-blue"
+          >
+            Home
+          </Link>
 
-            {navigation.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                onClick={closeMenu}
-                className="font-medium text-slate-700 transition-colors hover:text-apex-blue"
-              >
-                {item.label}
-              </a>
-            ))}
+          {navigation.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              onClick={closeMenu}
+              className="rounded-lg px-3 py-3 font-semibold text-slate-800 transition-colors hover:bg-slate-100 hover:text-apex-blue"
+            >
+              {item.label}
+            </a>
+          ))}
+
+          <div className="mt-4 border-t border-slate-200 pt-5">
+            <a
+              href="tel:5013668940"
+              onClick={closeMenu}
+              className="mb-3 flex min-h-11 items-center justify-center rounded-xl border border-slate-300 px-5 py-3 text-sm font-bold text-apex-blue transition-colors hover:bg-slate-50"
+            >
+              Call 501.366.8940
+            </a>
 
             <a
               href="#consultation"
               onClick={closeMenu}
-              className="mt-2 inline-flex justify-center rounded-lg bg-apex-blue px-5 py-3 font-semibold text-white transition hover:opacity-90"
+              className="flex min-h-12 items-center justify-center rounded-xl bg-apex-blue px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:opacity-90"
             >
-              Free Consultation
+              Schedule a Free Consultation
             </a>
           </div>
         </nav>
-      )}
+      </div>
     </div>
   );
 }
