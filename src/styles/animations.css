@@ -18,11 +18,11 @@
 }
 
 .reveal-left {
-  transform: translateX(28px);
+  transform: translateX(-28px);
 }
 
 .reveal-right {
-  transform: translateX(-28px);
+  transform: translateX(28px);
 }
 
 .reveal.is-visible {
