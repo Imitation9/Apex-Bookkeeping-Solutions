@@ -4,7 +4,7 @@ import Reveal from "../../UI/Reveal/Reveal";
 export default function HeroVisual() {
   return (
     <Reveal
-      direction="right"
+      animation="right"
       delay={180}
       className="relative mx-auto w-full max-w-2xl lg:mx-0"
     >
@@ -21,7 +21,7 @@ export default function HeroVisual() {
       <div className="hero-dashboard relative">
         <img
           src={heroDashboard}
-          alt="Illustration of an organized financial dashboard with reporting, reconciliation, budgeting, payroll, and fund tracking"
+          alt="Organized financial dashboard showing reporting, reconciliation, budgeting, payroll, and fund tracking"
           className="h-auto w-full"
           width="920"
           height="720"
@@ -36,8 +36,8 @@ export default function HeroVisual() {
         </span>
 
         <span>
-          <strong>Reconciled</strong>
-          <small>Records reviewed and current</small>
+          <strong>Books reconciled</strong>
+          <small>Records reviewed, accurate, and current</small>
         </span>
       </div>
 
@@ -46,7 +46,7 @@ export default function HeroVisual() {
 
         <span>
           <strong>Financial clarity</strong>
-          <small>Information you can act on</small>
+          <small>Reliable information you can act on</small>
         </span>
       </div>
     </Reveal>
