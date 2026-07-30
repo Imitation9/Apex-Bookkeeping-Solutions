@@ -1,29 +1,160 @@
+/* ==========================================================
+   Layout Utilities
+   ========================================================== */
+
+.container {
+  width: min(100% - 2rem, var(--container-width));
+  margin-inline: auto;
+}
+
+.container-wide {
+  width: min(100% - 2rem, var(--container-wide));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--section-space);
+}
+
+.section-sm {
+  padding-block: var(--section-space-sm);
+}
+
+.section-heading {
+  max-width: 48rem;
+  margin-bottom: 2.5rem;
+}
+
+.section-heading-center {
+  max-width: 48rem;
+  margin-right: auto;
+  margin-bottom: 2.5rem;
+  margin-left: auto;
+  text-align: center;
+}
+
+/* ==========================================================
+   Content Utilities
+   ========================================================== */
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-gold-600);
+  font-size: 0.775rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  width: 1.75rem;
+  height: 2px;
+  flex-shrink: 0;
+  background-color: currentColor;
+  content: "";
+}
+
+.lead {
+  max-width: 46rem;
+  color: var(--color-text-muted);
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  line-height: 1.75;
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.text-subtle {
+  color: var(--color-text-subtle);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* ==========================================================
+   Surface Utilities
+   ========================================================== */
+
+.surface {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.surface-elevated {
+  border: 1px solid rgb(226 232 240 / 0.8);
+  border-radius: var(--radius-xl);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-md);
+}
+
 .glass {
-
-  background: rgba(255,255,255,.82);
-
+  border: 1px solid rgb(255 255 255 / 0.5);
+  background: rgb(255 255 255 / 0.82);
   backdrop-filter: blur(16px);
-
-  border: 1px solid rgba(255,255,255,.5);
-
+  -webkit-backdrop-filter: blur(16px);
 }
 
 .shadow-premium {
-
   box-shadow: var(--shadow-lg);
+}
 
+.gold-rule {
+  width: 3.5rem;
+  height: 3px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: linear-gradient(
+    90deg,
+    var(--color-gold-600),
+    var(--color-gold-300)
+  );
 }
 
 .gradient-text {
-
   background: linear-gradient(
     135deg,
     var(--color-primary),
     var(--color-accent)
   );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
 
-  -webkit-background-clip:text;
+/* ==========================================================
+   Responsive Utilities
+   ========================================================== */
 
-  -webkit-text-fill-color:transparent;
+@media (max-width: 767px) {
+  .container,
+  .container-wide {
+    width: min(100% - 1.25rem, var(--container-width));
+  }
 
+  .section {
+    padding-block: 4rem;
+  }
+
+  .section-sm {
+    padding-block: 3rem;
+  }
+
+  .section-heading,
+  .section-heading-center {
+    margin-bottom: 2rem;
+  }
+
+  .eyebrow {
+    font-size: 0.725rem;
+    letter-spacing: 0.1em;
+  }
 }
