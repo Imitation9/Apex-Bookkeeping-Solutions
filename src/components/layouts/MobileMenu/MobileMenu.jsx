@@ -105,24 +105,24 @@ export default function MobileMenu() {
             </a>
           ))}
 
-          <div className="mt-4 border-t border-slate-200 pt-5">
-            <a
-              href={SITE.phoneHref}
-              onClick={closeMenu}
-              className="mb-3 flex min-h-11 items-center justify-center rounded-xl border border-slate-300 px-5 py-3 text-sm font-bold text-apex-blue transition-colors hover:bg-slate-50"
-            >
-              Call {SITE.phoneDisplay}
-            </a>
-            
- <a
-    href="https://calendly.com/ryoung4696"
+<div className="mt-4 border-t border-slate-200 pt-5">
+  <a
+    href={SITE.phoneHref}
+    onClick={closeMenu}
+    className="mb-3 flex min-h-11 items-center justify-center rounded-xl border border-slate-300 px-5 py-3 text-sm font-bold text-apex-blue transition-colors hover:bg-slate-50"
+  >
+    Call {SITE.phoneDisplay}
+  </a>
+
+  <a
+    href={SITE.calendly}
     target="_blank"
     rel="noopener noreferrer"
-   className="flex min-h-12 items-center justify-center rounded-xl bg-apex-gold px-5 py-3 text-sm font-bold text-apex-navy shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-xl"
+    className="flex min-h-12 items-center justify-center rounded-xl bg-apex-gold px-5 py-3 text-center text-sm font-bold text-apex-navy shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-xl"
   >
     Schedule a Free Consultation
   </a>
-          </div>
+</div>
         </nav>
       </div>
     </div>
