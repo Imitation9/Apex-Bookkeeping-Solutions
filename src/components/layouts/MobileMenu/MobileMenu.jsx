@@ -85,13 +85,13 @@ export default function MobileMenu() {
           aria-label="Mobile navigation"
           className="mx-auto flex max-w-7xl flex-col px-5 py-5 sm:px-6"
         >
-         <a
+          <a
             href="#home"
             onClick={closeMenu}
             className="rounded-lg px-3 py-3 font-semibold text-slate-800 transition-colors hover:bg-slate-100 hover:text-apex-blue"
-        >
-          Home
-        </a>
+          >
+            Home
+          </a>
 
           {navigation.map((item) => (
             <a
@@ -104,24 +104,24 @@ export default function MobileMenu() {
             </a>
           ))}
 
-        <div className="mt-4 border-t border-slate-200 pt-5">
-          <a
-            href={SITE.phoneHref}
-            onClick={closeMenu}
-            className="mb-3 flex min-h-11 items-center justify-center rounded-xl border border-slate-300 px-5 py-3 text-sm font-bold text-apex-blue transition-colors hover:bg-slate-50"
-          >    
-            Call {SITE.phoneDisplay}
-          </a>
+          <div className="mt-4 border-t border-slate-200 pt-5">
+            <a
+              href={SITE.phoneHref}
+              onClick={closeMenu}
+              className="mb-3 flex min-h-11 items-center justify-center rounded-xl border border-slate-300 px-5 py-3 text-sm font-bold text-apex-blue transition-colors hover:bg-slate-50"
+            >
+              Call {SITE.phoneDisplay}
+            </a>
 
-          <a
-            href={SITE.calendly}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex min-h-12 items-center justify-center rounded-xl bg-apex-gold px-5 py-3 text-center text-sm font-bold text-apex-navy shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-xl"
-          >
-            Schedule a Free Consultation
-          </a>
-        </div>
+            <a
+              href={SITE.calendly}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex min-h-12 items-center justify-center rounded-xl bg-apex-gold px-5 py-3 text-center text-sm font-bold text-apex-navy shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-xl"
+            >
+              Schedule a Free Consultation
+            </a>
+          </div>
         </nav>
       </div>
     </div>
