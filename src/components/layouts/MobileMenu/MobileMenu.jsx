@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { navigation } from "../../../config/navigation";
+import { SITE } from "../../../config/site";
 
 export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
