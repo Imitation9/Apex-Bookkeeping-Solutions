@@ -113,13 +113,15 @@ export default function MobileMenu() {
               Call 501.366.8940
             </a>
 
-            <a
-              href="#consultation"
-              onClick={closeMenu}
-              className="flex min-h-12 items-center justify-center rounded-xl bg-apex-blue px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:opacity-90"
-            >
-              Schedule a Free Consultation
-            </a>
+  <a
+    href="https://calendly.com/ryoung4696"
+    target="_blank"
+    rel="noopener noreferrer"
+    onClick={closeMenu}
+    className="flex min-h-12 items-center justify-center rounded-xl bg-apex-blue px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:opacity-90"
+  >
+    Schedule a Free Consultation
+  </a>
           </div>
         </nav>
       </div>
