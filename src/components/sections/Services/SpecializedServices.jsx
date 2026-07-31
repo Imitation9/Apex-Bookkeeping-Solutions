@@ -1,6 +1,6 @@
 import Reveal from "../../UI/Reveal/Reveal";
 
-import { specializedServiceGroups } from "./specializedServices";
+import { specializedServiceGroups } from "../../../data/specializedServices";
 
 const panelTones = {
   navy: {
