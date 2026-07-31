@@ -1,5 +1,8 @@
 export const SITE = {
   name: "Apex Bookkeeping Solutions, LLC",
-  phone: "501.366.8940",
+  shortName: "Apex Bookkeeping Solutions",
+  phoneDisplay: "501.366.8940",
+  phoneHref: "tel:5013668940",
   calendly: "https://calendly.com/ryoung4696",
+  location: "North Little Rock, Arkansas",
 };
