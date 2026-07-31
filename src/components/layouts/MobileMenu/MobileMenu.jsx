@@ -117,7 +117,7 @@ export default function MobileMenu() {
     href="https://calendly.com/ryoung4696"
     target="_blank"
     rel="noopener noreferrer"
-    className="flex min-h-12 items-center justify-center rounded-xl bg-apex-blue px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:opacity-90"
+   className="flex min-h-12 items-center justify-center rounded-xl bg-apex-gold px-5 py-3 text-sm font-bold text-apex-navy shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-xl"
   >
     Schedule a Free Consultation
   </a>
