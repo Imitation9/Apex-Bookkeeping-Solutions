@@ -5,7 +5,7 @@ import Section from "../../UI/Section/Section";
 import ServiceCard from "./ServiceCard";
 import SpecializedServices from "./SpecializedServices";
 
-import { services } from "./services";
+import { services } from "../../../data/services";
 
 export default function Services() {
   return (
