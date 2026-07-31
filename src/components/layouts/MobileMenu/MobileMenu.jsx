@@ -107,14 +107,14 @@ export default function MobileMenu() {
 
           <div className="mt-4 border-t border-slate-200 pt-5">
             <a
-              href="tel:5013668940"
+              href={SITE.phoneHref}
               onClick={closeMenu}
               className="mb-3 flex min-h-11 items-center justify-center rounded-xl border border-slate-300 px-5 py-3 text-sm font-bold text-apex-blue transition-colors hover:bg-slate-50"
             >
-              Call 501.366.8940
+              Call {SITE.phoneDisplay}
             </a>
-
-  <a
+            
+ <a
     href="https://calendly.com/ryoung4696"
     target="_blank"
     rel="noopener noreferrer"
