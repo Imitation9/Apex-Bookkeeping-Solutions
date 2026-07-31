@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
 import { navigation } from "../../../config/navigation";
 import { SITE } from "../../../config/site";
@@ -86,13 +85,13 @@ export default function MobileMenu() {
           aria-label="Mobile navigation"
           className="mx-auto flex max-w-7xl flex-col px-5 py-5 sm:px-6"
         >
-          <Link
-            to="/"
+         <a
+            href="#home"
             onClick={closeMenu}
             className="rounded-lg px-3 py-3 font-semibold text-slate-800 transition-colors hover:bg-slate-100 hover:text-apex-blue"
-          >
-            Home
-          </Link>
+        >
+          Home
+        </a>
 
           {navigation.map((item) => (
             <a
