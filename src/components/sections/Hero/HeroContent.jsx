@@ -1,5 +1,6 @@
 import Button from "../../UI/Button/Button";
 import Reveal from "../../UI/Reveal/Reveal";
+import { SITE } from "../../../config/site";
 
 const trustPoints = [
   "23+ years of experience",
@@ -32,12 +33,12 @@ export default function HeroContent() {
 
       <Reveal animation="up" delay={220}>
         <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-          <Button href="#consultation">
+          <Button
+            href={SITE.calendly}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Schedule a Free Consultation
-          </Button>
-
-          <Button href="#services" variant="outline">
-            Explore Our Services
           </Button>
         </div>
       </Reveal>
