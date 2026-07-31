@@ -1,98 +1,101 @@
+import {
+  BookOpenCheck,
+  BrushCleaning,
+  Calculator,
+  ChartNoAxesCombined,
+  ClipboardCheck,
+  Landmark,
+  ReceiptText,
+  WalletCards,
+} from "lucide-react";
+
 export const services = [
   {
-    id: 1,
     title: "Monthly Bookkeeping",
     description:
-      "Accurate, organized monthly bookkeeping that keeps your financial records current and gives you a clear view of your business performance.",
+      "Accurate monthly bookkeeping that keeps your records current, reconciled, and ready for informed decision-making.",
+    icon: BookOpenCheck,
     features: [
       "Transaction categorization",
       "Bank and credit card reconciliations",
-      "Monthly financial reports",
-      "Ongoing account review",
+      "Monthly account review",
     ],
   },
   {
-    id: 2,
     title: "Book Cleanup",
     description:
-      "Thorough cleanup of incomplete, inaccurate, or overdue books so you can move forward with dependable financial information.",
+      "Thorough cleanup of incomplete, inaccurate, or overdue records so you can move forward from a dependable foundation.",
+    icon: BrushCleaning,
     features: [
       "Historical transaction review",
-      "Account reconciliation",
-      "Correction of misclassified entries",
-      "Owner draw and personal expense separation",
+      "Correction of account balances",
+      "Personal and business activity separation",
     ],
   },
   {
-    id: 3,
-    title: "QuickBooks Setup",
+    title: "QuickBooks Online Setup",
     description:
-      "Professional QuickBooks Online setup designed around your organization, reporting needs, and day-to-day workflow.",
+      "A professionally configured QuickBooks Online file designed around your organization, workflow, and reporting requirements.",
+    icon: Calculator,
     features: [
       "Chart of accounts setup",
-      "Bank feed connection",
-      "Customer and vendor setup",
-      "Workflow configuration",
+      "Bank-feed configuration",
+      "Class and tracking structure",
     ],
   },
   {
-    id: 4,
     title: "Payroll Support",
     description:
-      "Reliable payroll assistance that helps keep employee records, payroll transactions, and related reporting organized.",
+      "Reliable payroll-related bookkeeping and reconciliation support that keeps wages, taxes, and liabilities organized.",
+    icon: Landmark,
     features: [
-      "Payroll setup assistance",
       "Payroll transaction review",
-      "Payroll reconciliation",
+      "Liability reconciliation",
       "QuickBooks Payroll support",
     ],
   },
   {
-    id: 5,
     title: "Accounts Payable & Receivable",
     description:
-      "Organized management of bills, invoices, customer balances, and vendor activity to support healthy cash flow.",
+      "Organized bill, invoice, vendor, and customer tracking that strengthens visibility and supports healthier cash flow.",
+    icon: WalletCards,
     features: [
-      "Invoice tracking",
-      "Bill management",
-      "Customer balance review",
-      "Vendor account monitoring",
+      "Bill and invoice tracking",
+      "Vendor balance review",
+      "Customer receivable monitoring",
     ],
   },
   {
-    id: 6,
     title: "Financial Reporting",
     description:
-      "Clear, timely financial reports that help business owners and nonprofit leaders understand results and make informed decisions.",
+      "Clear financial reports that help leaders understand performance, identify concerns, and make confident decisions.",
+    icon: ChartNoAxesCombined,
     features: [
       "Profit and loss statements",
       "Balance sheets",
-      "Cash flow reporting",
-      "Customized management reports",
+      "Customized management reporting",
     ],
   },
   {
-    id: 7,
     title: "Budgeting & Forecasting",
     description:
-      "Practical budgeting and forecasting support to help you plan responsibly, monitor performance, and prepare for what comes next.",
+      "Practical budgeting and forecasting support to help you plan responsibly and compare actual results against expectations.",
+    icon: ClipboardCheck,
     features: [
       "Annual budget preparation",
       "Budget-to-actual reporting",
-      "Cash flow forecasting",
-      "Scenario planning",
+      "Cash-flow forecasting",
     ],
   },
   {
-    id: 8,
     title: "1099 Support",
     description:
-      "Organized contractor tracking and 1099 preparation support to help reduce year-end stress and improve reporting accuracy.",
+      "Organized contractor tracking and year-end preparation support designed to reduce stress and improve reporting accuracy.",
+    icon: ReceiptText,
     features: [
-      "Vendor information review",
-      "Contractor payment tracking",
-      "1099 eligibility review",
-      "Year-end preparation support",
+      "Contractor payment review",
+      "Vendor information tracking",
+      "1099 preparation support",
     ],
   },
 ];
