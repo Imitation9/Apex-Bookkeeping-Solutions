@@ -14,7 +14,7 @@ const trustItems = [
     subtitle: "Primary Area of Focus",
   },
   {
-    title: "Arkansas",
+    title: "Arkansas Based",
     subtitle: "Locally Owned & Operated",
   },
 ];
@@ -27,27 +27,27 @@ export default function TrustBar() {
     >
       <div className="mx-auto max-w-7xl px-5 py-10 sm:px-6 lg:px-8">
         <Reveal animation="up">
-          <div className="grid grid-cols-2 gap-5 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {trustItems.map((item) => (
-              <div
+              <article
                 key={item.title}
-                className="group rounded-2xl border border-slate-200 bg-white p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-amber-300 hover:shadow-lg sm:p-6"
+                className="group flex min-h-[210px] flex-col items-center justify-center rounded-3xl border border-slate-200 bg-white px-5 py-7 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-apex-gold/60 hover:shadow-lg sm:px-6"
               >
                 <div
-                  className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-full bg-amber-50 text-xl font-bold text-amber-700 transition-transform duration-300 group-hover:scale-105"
+                  className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-full bg-apex-gold/10 text-lg font-bold text-apex-gold-dark transition-transform duration-300 group-hover:scale-105 group-hover:bg-apex-gold group-hover:text-apex-navy"
                   aria-hidden="true"
                 >
                   ✓
                 </div>
 
-                <h2 className="text-lg font-bold text-apex-navy sm:text-xl">
+                <p className="whitespace-nowrap text-2xl font-extrabold leading-tight tracking-tight text-apex-navy xl:text-[1.7rem]">
                   {item.title}
-                </h2>
+                </p>
 
-                <p className="mt-2 text-sm leading-6 text-slate-600">
+                <p className="mt-3 max-w-[15rem] text-sm font-medium leading-6 text-slate-600">
                   {item.subtitle}
                 </p>
-              </div>
+              </article>
             ))}
           </div>
         </Reveal>
