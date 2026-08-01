@@ -1,86 +1,111 @@
-import ProcessStep from "./ProcessStep";
+import {
+  CalendarDays,
+  ShieldCheck,
+} from "lucide-react";
 
-const steps = [
-  {
-    number: "01",
-    title: "Discovery and assessment",
-    description:
-      "We begin with a conversation about your organization, current bookkeeping process, priorities, and challenges. This helps us understand what is working, what needs attention, and where Apex can provide the greatest value.",
-  },
-  {
-    number: "02",
-    title: "Customized service plan",
-    description:
-      "You receive a clearly defined scope of work tailored to your needs. The plan may include bookkeeping, cleanup, QuickBooks setup, payroll support, reporting, budgeting, or other agreed-upon services.",
-  },
-  {
-    number: "03",
-    title: "Setup, cleanup, and transition",
-    description:
-      "We organize your records, resolve outstanding issues, establish efficient workflows, and make sure your QuickBooks environment is configured to support accurate and consistent financial management.",
-  },
-  {
-    number: "04",
-    title: "Ongoing bookkeeping and reporting",
-    description:
-      "Transactions are categorized, accounts are reconciled, records are reviewed, and reports are prepared on an agreed schedule so you always have reliable information available.",
-  },
-  {
-    number: "05",
-    title: "Review and continuous improvement",
-    description:
-      "We stay attentive to changing needs, answer questions, and refine processes as your organization grows. The goal is dependable financial clarity, not simply completed tasks.",
-  },
-];
+import Heading from "../../UI/Heading/Heading";
+import Reveal from "../../UI/Reveal/Reveal";
+import Section from "../../UI/Section/Section";
+
+import { SITE } from "../../../config/site";
+import { processSteps } from "../../../data/process";
+
+import ProcessStep from "./ProcessStep";
 
 export default function Process() {
   return (
-    <section
+    <Section
       id="process"
-      className="bg-white py-20 sm:py-24 lg:py-28"
+      background="white"
+      spacing="spacious"
+      className="relative isolate overflow-hidden"
       aria-labelledby="process-heading"
     >
-      <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 lg:px-8">
+      <div
+        className="pointer-events-none absolute -left-24 top-24 -z-10 h-72 w-72 rounded-full bg-apex-gold/10 blur-3xl"
+        aria-hidden="true"
+      />
+
+      <div
+        className="pointer-events-none absolute -right-32 bottom-16 -z-10 h-80 w-80 rounded-full bg-slate-200/50 blur-3xl"
+        aria-hidden="true"
+      />
+
+      <div className="grid gap-14 lg:grid-cols-[0.82fr_1.18fr] lg:gap-16 xl:gap-24">
         <div className="lg:sticky lg:top-28 lg:self-start">
-          <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-amber-700">
-            Our Process
-          </p>
+          <Reveal animation="up">
+            <Heading
+              eyebrow="How It Works"
+              title="A clear path to dependable financial records"
+              subtitle="Working with Apex is designed to feel organized, transparent, and straightforward from the first conversation through ongoing support."
+              size="lg"
+            />
+          </Reveal>
 
-          <h2
-            id="process-heading"
-            className="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl lg:text-5xl"
-          >
-            A clear path to dependable financial records
-          </h2>
+          <Reveal animation="up" delay={120}>
+            <div className="mt-8 rounded-3xl border border-slate-200 bg-apex-mist p-6 shadow-sm sm:p-8">
+              <div className="flex items-start gap-4">
+                <span className="inline-flex shrink-0 rounded-2xl bg-apex-navy p-3 text-apex-gold-light">
+                  <ShieldCheck
+                    size={25}
+                    strokeWidth={1.8}
+                    aria-hidden="true"
+                  />
+                </span>
 
-          <p className="mt-5 max-w-xl text-lg leading-8 text-slate-600">
-            Our process is designed to make bookkeeping straightforward,
-            organized, and transparent from the first conversation through
-            ongoing monthly support.
-          </p>
+                <div>
+                  <p className="font-bold text-apex-navy">
+                    No surprises. No unclear expectations.
+                  </p>
 
-          <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
-            <p className="font-semibold text-slate-950">
-              Clear expectations. Consistent communication. Reliable results.
-            </p>
+                  <p className="mt-2 leading-7 text-slate-600">
+                    Every engagement begins with a written agreement that
+                    clearly defines services, responsibilities, timing, and
+                    pricing before work begins.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </Reveal>
 
-            <p className="mt-2 leading-7 text-slate-600">
-              You will know what is being done, what information is needed, and
-              what to expect next.
-            </p>
-          </div>
+          <Reveal animation="up" delay={200}>
+            <a
+              href={SITE.calendly}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-apex-gold px-6 py-3 text-center font-bold text-apex-navy shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apex-navy focus-visible:ring-offset-4"
+            >
+              <CalendarDays
+                size={19}
+                strokeWidth={1.9}
+                aria-hidden="true"
+              />
+
+              Schedule a Free Consultation
+            </a>
+          </Reveal>
         </div>
 
-        <ol>
-          {steps.map((step, index) => (
-            <ProcessStep
+        <ol className="relative">
+          <span
+            className="absolute bottom-12 left-7 top-7 hidden w-px bg-gradient-to-b from-apex-gold via-apex-gold/60 to-slate-200 sm:block"
+            aria-hidden="true"
+          />
+
+          {processSteps.map((step, index) => (
+            <Reveal
               key={step.number}
-              {...step}
-              isLast={index === steps.length - 1}
-            />
+              animation="up"
+              delay={index * 90}
+            >
+              <ProcessStep
+                {...step}
+                isLast={index === processSteps.length - 1}
+              />
+            </Reveal>
           ))}
         </ol>
       </div>
-    </section>
+    </Section>
   );
 }
