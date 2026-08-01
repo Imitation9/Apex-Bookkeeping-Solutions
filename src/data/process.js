@@ -1,6 +1,7 @@
 import {
   CalendarDays,
-  Search,
+  ClipboardSearch,
+  FileSignature,
   Settings,
   TrendingUp,
 } from "lucide-react";
@@ -9,29 +10,61 @@ export const processSteps = [
   {
     icon: CalendarDays,
     number: "01",
-    title: "Schedule a Free Consultation",
+    title: "Schedule a Consultation",
     description:
-      "We'll discuss your organization, current bookkeeping needs, and goals to determine how Apex can best support you.",
+      "We begin with a complimentary conversation about your organization, current bookkeeping needs, priorities, and goals.",
+    items: [
+      "No-obligation consultation",
+      "Discuss current challenges",
+      "Clarify goals and priorities",
+    ],
   },
   {
-    icon: Search,
+    icon: ClipboardSearch,
     number: "02",
-    title: "Review Your Financial Records",
+    title: "Evaluate Your Records",
     description:
-      "We'll evaluate your existing books, identify opportunities for improvement, and recommend a clear path forward.",
+      "We review your current financial records, identify areas that need attention, and determine the services that will provide the greatest value.",
+    items: [
+      "Review existing books",
+      "Identify gaps or concerns",
+      "Recommend practical solutions",
+    ],
+  },
+  {
+    icon: FileSignature,
+    number: "03",
+    title: "Define the Engagement",
+    description:
+      "You receive a clearly documented scope of services, transparent pricing, and an engagement agreement before work begins.",
+    items: [
+      "Clearly defined scope",
+      "Transparent pricing",
+      "Shared expectations",
+    ],
   },
   {
     icon: Settings,
-    number: "03",
-    title: "Implement Your Bookkeeping Solution",
+    number: "04",
+    title: "Build the Financial System",
     description:
-      "We'll organize your books, establish reliable processes, and maintain accurate financial records each month.",
+      "We organize records, complete cleanup work, configure QuickBooks, and establish dependable bookkeeping and reporting workflows.",
+    items: [
+      "Organized financial records",
+      "Improved processes",
+      "Reliable reporting structure",
+    ],
   },
   {
     icon: TrendingUp,
-    number: "04",
-    title: "Support Your Continued Growth",
+    number: "05",
+    title: "Support Continued Confidence",
     description:
-      "Receive dependable reporting, responsive communication, and financial information that helps you make informed decisions.",
+      "Apex provides responsive support, timely reporting, and bookkeeping that adapts as your organization grows and changes.",
+    items: [
+      "Accurate ongoing records",
+      "Responsive communication",
+      "Better-informed decisions",
+    ],
   },
 ];
