@@ -1,3 +1,16 @@
+import {
+  BriefcaseBusiness,
+  Building2,
+  HandCoins,
+  Rocket,
+} from "lucide-react";
+
+import Heading from "../../UI/Heading/Heading";
+import Reveal from "../../UI/Reveal/Reveal";
+import Section from "../../UI/Section/Section";
+
+import { SITE } from "../../../config/site";
+
 import AudienceCard from "./AudienceCard";
 
 const audiences = [
@@ -11,49 +24,20 @@ const audiences = [
       "Budget monitoring",
       "Donor and program accountability",
     ],
-    icon: (
-      <svg
-        className="h-6 w-6"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        aria-hidden="true"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M3 21h18M5 21V9m14 12V9M4 9h16L12 3 4 9Zm4 4v4m4-4v4m4-4v4"
-        />
-      </svg>
-    ),
+    icon: HandCoins,
+    featured: true,
   },
   {
     title: "Small Businesses",
     description:
-      "Dependable bookkeeping and financial reporting that give owners a clearer picture of performance, cash flow, and priorities.",
+      "Dependable bookkeeping and reporting that give owners a clearer view of performance, cash flow, and financial priorities.",
     items: [
       "Monthly bookkeeping",
       "Accounts payable and receivable",
       "Payroll support",
-      "Financial statement preparation",
+      "Management-ready reporting",
     ],
-    icon: (
-      <svg
-        className="h-6 w-6"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        aria-hidden="true"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M3 21h18M6 21V7h12v14M9 10h2m2 0h2m-6 4h2m2 0h2m-6 4h6M8 7V4h8v3"
-        />
-      </svg>
-    ),
+    icon: Building2,
   },
   {
     title: "Startups",
@@ -65,101 +49,94 @@ const audiences = [
       "Budget development",
       "Bookkeeping workflows and controls",
     ],
-    icon: (
-      <svg
-        className="h-6 w-6"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        aria-hidden="true"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M14.5 4.5c2.8-1.5 5-1.5 5-1.5s0 2.2-1.5 5l-4.2 7.1-4.9-4.9 5.6-5.7ZM8.9 10.2 5.4 11.3 3 13.7l5.2.1m5.6 2L13.7 21l2.4-2.4 1.1-3.5M9 17l-2 2m3-1-3 3"
-        />
-      </svg>
-    ),
+    icon: Rocket,
   },
   {
     title: "Professional Services",
     description:
-      "Streamlined bookkeeping for consultants, agencies, and other service-based firms that need accurate records without unnecessary complexity.",
+      "Streamlined bookkeeping for consultants, agencies, and service-based firms that need accurate records without unnecessary complexity.",
     items: [
       "Income and expense tracking",
       "Client and project reporting",
       "Monthly reconciliations",
-      "Management-ready financial reports",
+      "Financial performance reporting",
     ],
-    icon: (
-      <svg
-        className="h-6 w-6"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        aria-hidden="true"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M9 7V5.5A2.5 2.5 0 0 1 11.5 3h1A2.5 2.5 0 0 1 15 5.5V7m-10 0h14a2 2 0 0 1 2 2v8a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V9a2 2 0 0 1 2-2Zm-2 5h18M10 12v2h4v-2"
-        />
-      </svg>
-    ),
+    icon: BriefcaseBusiness,
   },
 ];
 
 export default function Audiences() {
   return (
-    <section
+    <Section
       id="who-we-serve"
-      className="bg-slate-50 py-20 sm:py-24 lg:py-28"
+      background="mist"
+      spacing="spacious"
       aria-labelledby="audiences-heading"
     >
-      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-        <div className="mx-auto mb-12 max-w-3xl text-center lg:mb-16">
-          <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-amber-700">
-            Who We Serve
-          </p>
+      <Reveal animation="up">
+        <Heading
+          eyebrow="Who We Serve"
+          title="Bookkeeping built around your organization"
+          subtitle="Apex provides tailored financial support for organizations that value accuracy, transparency, responsible stewardship, and dependable reporting."
+          align="center"
+          size="lg"
+          className="mx-auto"
+        />
+      </Reveal>
 
-          <h2
-            id="audiences-heading"
-            className="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl lg:text-5xl"
+      <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        {audiences.map((audience, index) => (
+          <Reveal
+            key={audience.title}
+            animation="up"
+            delay={index * 90}
+            className="h-full"
           >
-            Bookkeeping built around your organization
-          </h2>
-
-          <p className="mt-5 text-lg leading-8 text-slate-600">
-            Apex Bookkeeping Solutions provides tailored financial support for
-            organizations that value accuracy, transparency, and dependable
-            reporting.
-          </p>
-        </div>
-
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {audiences.map((audience) => (
-            <AudienceCard key={audience.title} {...audience} />
-          ))}
-        </div>
-
-        <div className="mx-auto mt-12 max-w-4xl rounded-2xl bg-slate-900 px-6 py-8 text-center shadow-lg sm:px-10">
-          <p className="text-lg leading-8 text-slate-100">
-            Whether you are launching a new venture, managing a growing
-            nonprofit, or leading an established business, Apex delivers
-            dependable financial support that helps you make decisions with
-            confidence.
-          </p>
-
-          <a
-            href="#contact"
-            className="mt-6 inline-flex items-center justify-center rounded-lg bg-amber-400 px-6 py-3 font-semibold text-slate-950 transition hover:bg-amber-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-300"
-          >
-            Schedule a Free Consultation
-          </a>
-        </div>
+            <AudienceCard {...audience} />
+          </Reveal>
+        ))}
       </div>
-    </section>
+
+      <Reveal animation="up" delay={180}>
+        <div className="relative mt-14 overflow-hidden rounded-3xl bg-apex-navy px-6 py-10 text-center shadow-2xl shadow-slate-900/10 sm:px-10 lg:px-16">
+          <div
+            className="pointer-events-none absolute -left-20 top-0 h-56 w-56 rounded-full bg-apex-gold/10 blur-3xl"
+            aria-hidden="true"
+          />
+
+          <div
+            className="pointer-events-none absolute -right-20 bottom-0 h-64 w-64 rounded-full bg-white/5 blur-3xl"
+            aria-hidden="true"
+          />
+
+          <div className="relative mx-auto max-w-4xl">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-apex-gold-light">
+              Support Designed Around You
+            </p>
+
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              Your financial system should reflect how your organization
+              actually operates
+            </h2>
+
+            <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-300">
+              Whether you are leading a nonprofit, managing a growing business,
+              launching a new venture, or operating a professional practice,
+              Apex provides dependable support designed around your goals,
+              responsibilities, and reporting needs.
+            </p>
+
+            <a
+              href={SITE.calendly}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-7 inline-flex min-h-12 items-center justify-center rounded-xl bg-apex-gold px-7 py-3 text-center font-bold text-apex-navy shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-4 focus-visible:ring-offset-apex-navy"
+            >
+              Schedule a Free Consultation
+            </a>
+          </div>
+        </div>
+      </Reveal>
+    </Section>
   );
 }
