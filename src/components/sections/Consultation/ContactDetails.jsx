@@ -32,10 +32,10 @@ export default function ContactDetails() {
         Why Schedule?
       </p>
 
-      <h3 className="mt-4 text-3xl font-bold text-white">
+      <p className="mt-4 text-3xl font-bold leading-tight tracking-tight text-white">
         Start with a clear conversation about your needs
-      </h3>
-
+      </p>
+      
       <p className="mt-6 text-lg leading-9 text-slate-200">
         Every organization has unique bookkeeping needs. Your consultation
         gives us an opportunity to understand your goals, answer your
