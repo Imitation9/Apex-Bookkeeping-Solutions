@@ -1,5 +1,9 @@
-import Section from "../../UI/Section/Section";
 import Heading from "../../UI/Heading/Heading";
+import Reveal from "../../UI/Reveal/Reveal";
+import Section from "../../UI/Section/Section";
+
+import { SITE } from "../../../config/site";
+
 import Credentials from "./Credentials";
 import Values from "./Values";
 
@@ -7,43 +11,114 @@ export default function About() {
   return (
     <Section
       id="about"
-      className="bg-slate-50"
+      background="mist"
+      spacing="spacious"
+      className="relative isolate overflow-hidden"
     >
-      <div className="grid gap-16 items-center lg:grid-cols-2">
+      <div
+        className="pointer-events-none absolute -right-16 top-8 -z-10 select-none font-serif text-[24rem] font-bold leading-none text-apex-navy/[0.025]"
+        aria-hidden="true"
+      >
+        A
+      </div>
 
+      <div
+        className="pointer-events-none absolute -left-32 bottom-10 -z-10 h-80 w-80 rounded-full bg-apex-gold/10 blur-3xl"
+        aria-hidden="true"
+      />
+
+      <div className="grid items-start gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16 xl:gap-24">
         <div>
+          <Reveal animation="up">
+            <Heading
+              eyebrow="Why Apex"
+              title="Financial leadership built on experience."
+              subtitle="Apex Bookkeeping Solutions was founded on the belief that reliable financial information is essential to responsible leadership, informed decisions, and lasting organizational success."
+              size="lg"
+            />
+          </Reveal>
 
-          <Heading
-            eyebrow="Why Apex"
-            title="Financial Stewardship Built on Experience, Integrity, and Trust."
-            subtitle="Apex Bookkeeping Solutions was founded to help organizations gain confidence in their financial information through accurate bookkeeping, dependable reporting, and responsive service."
-          />
+          <Reveal animation="up" delay={100}>
+            <div className="mt-8 border-l-2 border-apex-gold pl-6 sm:pl-8">
+              <p className="text-lg leading-8 text-slate-700">
+                For more than{" "}
+                <strong className="text-apex-navy">
+                  23 years
+                </strong>
+                , Robert L. Young has served in financial leadership roles
+                where accuracy, accountability, and responsible stewardship
+                were expected every day.
+              </p>
 
-          <p className="mt-8 text-lg leading-8 text-slate-600">
+              <p className="mt-6 text-lg leading-8 text-slate-700">
+                Managing public funds, developing budgets, administering grant
+                programs, strengthening internal controls, and producing
+                dependable financial reports required precision, transparency,
+                and a commitment to protecting the organizations served.
+              </p>
 
-            With more than twenty-three years managing public funds,
-            budgets, grant programs, and financial reporting,
-            Robert Young brings a level of financial stewardship that
-            extends well beyond traditional bookkeeping.
+              <p className="mt-6 text-lg leading-8 text-slate-700">
+                Those same principles became the foundation of{" "}
+                <strong className="text-apex-navy">
+                  Apex Bookkeeping Solutions
+                </strong>
+                . Today, Apex supports nonprofits, startups, and small
+                businesses seeking organized financial records, meaningful
+                reporting, and dependable long-term partnership.
+              </p>
 
-          </p>
+              <p className="mt-6 text-lg leading-8 text-slate-700">
+                Whether bringing overdue books current, implementing
+                QuickBooks Online, or supporting ongoing financial operations,
+                every engagement is guided by professionalism, integrity, and
+                attention to detail.
+              </p>
+            </div>
+          </Reveal>
 
-          <p className="mt-6 text-lg leading-8 text-slate-600">
+          <Reveal animation="up" delay={180}>
+            <blockquote className="relative mt-10 rounded-2xl border border-apex-gold/20 bg-white p-6 shadow-sm sm:p-8">
+              <span
+                className="absolute left-5 top-1 font-serif text-6xl leading-none text-apex-gold/30"
+                aria-hidden="true"
+              >
+                “
+              </span>
 
-            Our primary focus is serving nonprofit organizations,
-            while also helping small businesses and startups establish
-            organized financial systems that support long-term success.
+              <p className="relative pl-5 font-serif text-xl font-semibold leading-8 text-apex-navy sm:text-2xl">
+                Better financial decisions begin with reliable financial
+                information.
+              </p>
+            </blockquote>
+          </Reveal>
 
-          </p>
+          <Reveal animation="up" delay={240}>
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+              <a
+                href={SITE.calendly}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-12 items-center justify-center rounded-xl bg-apex-gold px-6 py-3 text-center font-bold text-apex-navy shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-lg"
+              >
+                Schedule a Free Consultation
+              </a>
 
+              <a
+                href="#who-we-serve"
+                className="inline-flex min-h-12 items-center justify-center rounded-xl border border-slate-300 bg-white px-6 py-3 font-semibold text-slate-800 transition-all duration-300 hover:-translate-y-0.5 hover:border-apex-gold hover:shadow-sm"
+              >
+                See Who We Serve
+              </a>
+            </div>
+          </Reveal>
         </div>
 
-        <Credentials />
-
+        <Reveal animation="right" delay={140}>
+          <Credentials />
+        </Reveal>
       </div>
 
       <Values />
-
     </Section>
   );
 }
