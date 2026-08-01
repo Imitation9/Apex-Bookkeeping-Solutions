@@ -277,21 +277,22 @@ blockquote {
   font-family: var(--font-serif);
   line-height: 1.6;
 }
+
 /* ==========================================================
    Dark Background Contrast Safeguards
    ========================================================== */
 
-    .bg-apex-navy h1,
-    .bg-apex-navy h2,
-    .bg-apex-navy h3,
-    .bg-apex-navy h4,
-    .bg-apex-navy h5,
-    .bg-apex-navy h6,
-    .bg-apex-navy strong,
-    .bg-apex-navy b,
-    .bg-apex-navy blockquote {
-      color: #ffffff;
-    }
+  .bg-apex-navy h1,
+  .bg-apex-navy h2,
+  .bg-apex-navy h3,
+  .bg-apex-navy h4,
+  .bg-apex-navy h5,
+  .bg-apex-navy h6,
+  .bg-apex-navy strong,
+  .bg-apex-navy b,
+  .bg-apex-navy blockquote {
+    color: #ffffff;
+   }
 
 /* ==========================================================
    Focus and Accessibility
