@@ -4,8 +4,8 @@ import {
   Phone,
 } from "lucide-react";
 
-import { footerNavigation } from "../../../data/footerNavigation";
 import { SITE } from "../../../config/site";
+import { footerNavigation } from "../../../data/footerNavigation";
 
 export default function Footer() {
   return (
@@ -84,24 +84,24 @@ export default function Footer() {
           </a>
         </div>
 
-        <div>
-           <div className="mb-8">
-              <p className="text-sm font-bold uppercase tracking-[0.2em] text-apex-gold-light">
-                Company
-              </p>
+        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+          <div className="mb-8">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-apex-gold-light">
+              Company
+            </p>
 
-        <div     
-          className="mt-3 h-0.5 w-14 rounded-full bg-apex-gold"
-          aria-hidden="true"
-        />
-      </div>
+            <div
+              className="mt-3 h-0.5 w-14 rounded-full bg-apex-gold"
+              aria-hidden="true"
+            />
+          </div>
 
-          <ul className="space-y-3">
+          <ul className="space-y-4">
             {footerNavigation.company.map((item) => (
               <li key={item.label}>
                 <a
                   href={item.href}
-                  className="inline-flex rounded text-slate-300 transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apex-gold focus-visible:ring-offset-2 focus-visible:ring-offset-apex-navy"
+                  className="group inline-flex items-center rounded text-base font-medium text-slate-300 transition-all duration-300 hover:translate-x-1 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apex-gold focus-visible:ring-offset-2 focus-visible:ring-offset-apex-navy"
                 >
                   {item.label}
                 </a>
@@ -110,25 +110,24 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div>
-          
-       <div className="mb-8">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-apex-gold-light">
-            Services
-          </p>
+        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+          <div className="mb-8">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-apex-gold-light">
+              Services
+            </p>
 
-        <div
-          className="mt-3 h-0.5 w-14 rounded-full bg-apex-gold"
-          aria-hidden="true"
-        />
-      </div>
+            <div
+              className="mt-3 h-0.5 w-14 rounded-full bg-apex-gold"
+              aria-hidden="true"
+            />
+          </div>
 
-          <ul className="space-y-3">
+          <ul className="space-y-4">
             {footerNavigation.services.map((item) => (
               <li key={item.label}>
                 <a
                   href={item.href}
-                  className="inline-flex rounded text-slate-300 transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apex-gold focus-visible:ring-offset-2 focus-visible:ring-offset-apex-navy"
+                  className="group inline-flex items-center rounded text-base font-medium text-slate-300 transition-all duration-300 hover:translate-x-1 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apex-gold focus-visible:ring-offset-2 focus-visible:ring-offset-apex-navy"
                 >
                   {item.label}
                 </a>
