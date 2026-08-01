@@ -292,18 +292,6 @@ blockquote {
     .bg-apex-navy blockquote {
       color: #ffffff;
     }
-/* ==========================================================
-   Dark Background Heading Contrast
-   ========================================================== */
-
-    .bg-apex-navy h1,
-    .bg-apex-navy h2,
-    .bg-apex-navy h3,
-    .bg-apex-navy h4,
-    .bg-apex-navy h5,
-    .bg-apex-navy h6 {
-      color: #ffffff;
-  }
 
 /* ==========================================================
    Focus and Accessibility
