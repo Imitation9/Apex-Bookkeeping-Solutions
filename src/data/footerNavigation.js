@@ -6,7 +6,7 @@ export const footerNavigation = {
     },
     {
       label: "Who We Serve",
-      href: "#industries",
+      href: "#who-we-serve",
     },
     {
       label: "Our Process",
