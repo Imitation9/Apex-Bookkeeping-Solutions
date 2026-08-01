@@ -20,7 +20,7 @@ export const footerNavigation = {
 
   services: [
     {
-      label: "Bookkeeping",
+      label: "Monthly Bookkeeping",
       href: "#services",
     },
     {
@@ -28,11 +28,11 @@ export const footerNavigation = {
       href: "#services",
     },
     {
-      label: "Payroll",
+      label: "Payroll Support",
       href: "#services",
     },
     {
-      label: "QuickBooks Consulting",
+      label: "QuickBooks Online",
       href: "#services",
     },
   ],
