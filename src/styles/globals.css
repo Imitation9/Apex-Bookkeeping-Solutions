@@ -197,7 +197,6 @@ h4,
 h5,
 h6 {
   margin-top: 0;
-  color: var(--color-heading);
   font-weight: 700;
   line-height: 1.12;
 }
@@ -264,7 +263,6 @@ h6 {
 
 strong,
 b {
-  color: var(--color-heading);
   font-weight: 700;
 }
 
@@ -273,26 +271,9 @@ small {
 }
 
 blockquote {
-  color: var(--color-heading);
   font-family: var(--font-serif);
   line-height: 1.6;
 }
-
-/* ==========================================================
-   Dark Background Contrast Safeguards
-   ========================================================== */
-
-  .bg-apex-navy h1,
-  .bg-apex-navy h2,
-  .bg-apex-navy h3,
-  .bg-apex-navy h4,
-  .bg-apex-navy h5,
-  .bg-apex-navy h6,
-  .bg-apex-navy strong,
-  .bg-apex-navy b,
-  .bg-apex-navy blockquote {
-    color: #ffffff;
-   }
 
 /* ==========================================================
    Focus and Accessibility
