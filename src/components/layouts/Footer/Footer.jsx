@@ -85,9 +85,16 @@ export default function Footer() {
         </div>
 
         <div>
-           <p className="mb-6 text-lg font-bold text-white">
-            Company
-          </p>
+           <div className="mb-8">
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-apex-gold-light">
+                Company
+              </p>
+
+        <div     
+          className="mt-3 h-0.5 w-14 rounded-full bg-apex-gold"
+          aria-hidden="true"
+        />
+      </div>
 
           <ul className="space-y-3">
             {footerNavigation.company.map((item) => (
@@ -105,9 +112,16 @@ export default function Footer() {
 
         <div>
           
-          <p className="mb-6 text-lg font-bold text-white">
+       <div className="mb-8">
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-apex-gold-light">
             Services
           </p>
+
+        <div
+          className="mt-3 h-0.5 w-14 rounded-full bg-apex-gold"
+          aria-hidden="true"
+        />
+      </div>
 
           <ul className="space-y-3">
             {footerNavigation.services.map((item) => (
