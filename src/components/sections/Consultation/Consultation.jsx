@@ -8,7 +8,7 @@ import ContactDetails from "./ContactDetails";
 export default function Consultation() {
   return (
     <Section
-      id="contact"
+      id="consultation"
       spacing="spacious"
       className="relative isolate overflow-hidden bg-gradient-to-br from-apex-navy-light to-apex-navy text-white"
     >
