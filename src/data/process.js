@@ -20,7 +20,7 @@ export const processSteps = [
     ],
   },
   {
-    icon: ClipboardSearch,
+    icon: ClipboardList,
     number: "02",
     title: "Evaluate Your Records",
     description:
