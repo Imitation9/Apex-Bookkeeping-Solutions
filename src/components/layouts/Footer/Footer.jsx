@@ -85,9 +85,9 @@ export default function Footer() {
         </div>
 
         <div>
-          <h2 className="mb-6 text-lg font-bold text-white">
+           <p className="mb-6 text-lg font-bold text-white">
             Company
-          </h2>
+          </p>
 
           <ul className="space-y-3">
             {footerNavigation.company.map((item) => (
@@ -104,9 +104,10 @@ export default function Footer() {
         </div>
 
         <div>
-          <h2 className="mb-6 text-lg font-bold text-white">
+          
+          <p className="mb-6 text-lg font-bold text-white">
             Services
-          </h2>
+          </p>
 
           <ul className="space-y-3">
             {footerNavigation.services.map((item) => (
