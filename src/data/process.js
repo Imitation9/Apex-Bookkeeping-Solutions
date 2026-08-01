@@ -1,6 +1,6 @@
 import {
   CalendarDays,
-  ClipboardSearch,
+  ClipboardList,
   FileSignature,
   Settings,
   TrendingUp,
