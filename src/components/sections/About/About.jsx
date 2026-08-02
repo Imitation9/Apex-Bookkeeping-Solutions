@@ -12,15 +12,15 @@ import BrandWatermark from "../../UI/BrandWatermark/BrandWatermark";
 export default function About() {
   return (
     <Section
-      <BrandWatermark
-        position="right"
-        className="hidden lg:block"
-      />
       id="about"
       background="mist"
       spacing="spacious"
       className="relative isolate overflow-hidden"
     >
+      <BrandWatermark
+        position="right"
+        className="hidden lg:block"
+      />
       <div
         className="pointer-events-none absolute -left-32 bottom-10 -z-10 h-80 w-80 rounded-full bg-apex-gold/10 blur-3xl"
         aria-hidden="true"
