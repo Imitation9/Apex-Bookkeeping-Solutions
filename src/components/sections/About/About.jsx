@@ -25,7 +25,8 @@ export default function About() {
         className="pointer-events-none absolute -left-32 bottom-10 -z-10 h-80 w-80 rounded-full bg-apex-gold/10 blur-3xl"
         aria-hidden="true"
       />
-
+  </Section>
+);
       <div className="grid items-start gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16 xl:gap-24">
         <div>
           <Reveal animation="up">
