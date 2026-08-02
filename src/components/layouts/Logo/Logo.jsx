@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
 
-import apexLogo from "../../../assets/logo/apex-logo.png";
+import apexMark from "../../../assets/logo/apex-mark.svg";
 
 export default function Logo() {
   return (
     <Link
       to="/"
       aria-label="Apex Bookkeeping Solutions home"
-      className="group flex min-w-0 items-center gap-3 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apex-gold focus-visible:ring-offset-4"
+      className="group flex min-w-0 items-center gap-3"
     >
       <img
-        src={apexLogo}
+        src={apexMark}
         alt=""
         aria-hidden="true"
         className="h-12 w-12 shrink-0 object-contain transition-transform duration-300 group-hover:scale-105 sm:h-14 sm:w-14"
