@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import apexMark from "../../../assets/logo/apex-mark.svg";
+import apexMark from "../../../assets/logo/apex-mark.png";
 
 export default function Logo() {
   return (
