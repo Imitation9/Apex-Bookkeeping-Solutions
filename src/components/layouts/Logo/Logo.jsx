@@ -22,7 +22,7 @@ export default function Logo() {
           Apex Bookkeeping Solutions
         </p>
 
-        <p className="mt-1 hidden text-xs font-semibold leading-none tracking-[0.035em] text-slate-500 sm:block">
+        <p className="mt-1.5 hidden text-xs font-semibold leading-none tracking-[0.04em] text-slate-500 sm:block">
           Clarity. Accuracy. Confidence.
         </p>
       </div>
