@@ -19,18 +19,10 @@ export default function BrandWatermark({
       ].join(" ")}
       aria-hidden="true"
     >
-      <img
+     <img
         src={apexMark}
         alt=""
-        className="
-          h-auto
-          w-[34rem]
-          xl:w-[40rem]
-          2xl:w-[46rem]
-          opacity-[0.035]
-          blur-[0.4px]
-          animate-float-slow
-        "
+        className="brand-watermark__image h-auto w-full"
         draggable="false"
       />
     </div>
