@@ -8,6 +8,8 @@ import { SITE } from "../../../config/site";
 import Credentials from "./Credentials";
 import Values from "./Values";
 
+import apexMark from "../../../assets/logo/apex-mark.png";
+
 export default function About() {
   return (
     <Section
@@ -18,7 +20,7 @@ export default function About() {
     >
       <BrandWatermark
         position="right"
-        className="hidden lg:block"
+        className="hidden opacity-80 lg:block"
       />
 
       <div
