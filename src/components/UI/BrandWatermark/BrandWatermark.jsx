@@ -13,17 +13,17 @@ export default function BrandWatermark({
   return (
     <div
       className={[
-        "pointer-events-none absolute -z-10 select-none",
+        "brand-watermark pointer-events-none absolute -z-10 select-none",
         positions[position] ?? positions.right,
         className,
       ].join(" ")}
       aria-hidden="true"
     >
-     <img
+      <img
         src={apexMark}
         alt=""
-        className="brand-watermark__image h-auto w-full"
         draggable="false"
+        className="w-full h-auto"
       />
     </div>
   );
