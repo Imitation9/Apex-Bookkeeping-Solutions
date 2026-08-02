@@ -1,4 +1,4 @@
-import apexMark from "../../../assets/logo/apex-mark.svg";
+import apexMark from "../../../assets/logo/apex-mark.png";
 
 export default function BrandWatermark({
   className = "",
