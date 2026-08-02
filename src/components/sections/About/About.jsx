@@ -7,21 +7,20 @@ import { SITE } from "../../../config/site";
 import Credentials from "./Credentials";
 import Values from "./Values";
 
+import BrandWatermark from "../../UI/BrandWatermark/BrandWatermark";
+
 export default function About() {
   return (
     <Section
+      <BrandWatermark
+        position="right"
+        className="hidden lg:block"
+      />
       id="about"
       background="mist"
       spacing="spacious"
       className="relative isolate overflow-hidden"
     >
-      <div
-        className="pointer-events-none absolute -right-16 top-8 -z-10 select-none font-serif text-[24rem] font-bold leading-none text-apex-navy/[0.025]"
-        aria-hidden="true"
-      >
-        A
-      </div>
-
       <div
         className="pointer-events-none absolute -left-32 bottom-10 -z-10 h-80 w-80 rounded-full bg-apex-gold/10 blur-3xl"
         aria-hidden="true"
