@@ -152,3 +152,34 @@
     animation: none;
   }
 }
+/* ==========================================================
+   Apex Brand Watermark
+   ========================================================== */
+
+.brand-watermark {
+  width: clamp(16rem, 32vw, 32rem);
+  opacity: 0.035;
+  animation: brand-watermark-drift 12s ease-in-out infinite;
+  transform-origin: center;
+  will-change: opacity, transform;
+}
+
+@keyframes brand-watermark-drift {
+  0%,
+  100% {
+    opacity: 0.025;
+    transform: translateY(4px) scale(0.99);
+  }
+
+  50% {
+    opacity: 0.06;
+    transform: translateY(-8px) scale(1.02);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-watermark {
+    opacity: 0.04;
+    animation: none;
+  }
+}
