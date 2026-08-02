@@ -16,9 +16,9 @@ export default function Logo() {
         draggable="false"
         className="
           h-14 w-14 shrink-0 object-contain
-          transition-all duration-300 ease-out
-          group-hover:-translate-y-[1px]
-          group-hover:scale-[1.035]
+          transition-all duration-500 ease-out
+          group-hover:-translate-y-[2px]
+          group-hover:scale-[1.045]
           sm:h-16 sm:w-16
         "
       />
@@ -26,14 +26,25 @@ export default function Logo() {
       <div className="min-w-0">
         <p
           className="
-            whitespace-nowrap pb-0.5
+            whitespace-nowrap
+            pb-0.5
             text-[1.05rem]
             font-semibold
             leading-[1.4]
             tracking-[-0.01em]
+
             text-apex-navy
-            transition-colors duration-300
-            group-hover:text-apex-gold
+
+            transition-all
+            duration-500
+
+            group-hover:bg-gradient-to-r
+            group-hover:from-apex-navy
+            group-hover:via-apex-gold
+            group-hover:to-apex-gold
+            group-hover:bg-clip-text
+            group-hover:text-transparent
+
             sm:text-[1.32rem]
           "
         >
@@ -42,13 +53,16 @@ export default function Logo() {
 
         <p
           className="
-            mt-1 hidden whitespace-nowrap
+            mt-1
+            hidden
+            whitespace-nowrap
             text-xs
             font-medium
             leading-[1.3]
-            tracking-[0.04em]
+            tracking-[0.045em]
             text-slate-500
-            transition-colors duration-300
+            transition-colors
+            duration-500
             group-hover:text-slate-600
             sm:block
           "
