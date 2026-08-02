@@ -36,8 +36,8 @@ export default function Header() {
         className={[
           "mx-auto flex max-w-7xl items-center justify-between px-5 transition-all duration-300 sm:px-6 lg:px-8",
           isScrolled
-            ? "min-h-[74px] py-2"
-            : "min-h-[84px] py-2.5",
+            ? "min-h-[80px] py-2"
+            : "min-h-[92px] py-2.5",
         ].join(" ")}
       >
         <Logo />
