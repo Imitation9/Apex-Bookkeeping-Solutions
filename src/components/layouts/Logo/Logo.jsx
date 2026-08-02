@@ -18,11 +18,11 @@ export default function Logo() {
       />
 
       <div className="min-w-0">
-        <p className="truncate text-[1.05rem] font-bold leading-[1.15] tracking-[-0.015em] text-apex-navy sm:text-xl">
+        <p className="whitespace-nowrap pb-0.5 text-[1.05rem] font-semibold leading-[1.35] tracking-[-0.01em] text-apex-navy sm:text-[1.32rem]">
           Apex Bookkeeping Solutions
         </p>
-
-        <p className="mt-1 hidden whitespace-nowrap text-xs font-medium leading-1.35 tracking-[0.05em] text-slate-500 sm:block">
+        
+        <p className="mt-1 hidden whitespace-nowrap text-xs font-semibold leading-[1.3] tracking-[0.04em] text-slate-500 sm:block">
           Clarity. Accuracy. Confidence.
         </p>
       </div>
