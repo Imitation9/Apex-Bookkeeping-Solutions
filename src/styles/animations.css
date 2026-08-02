@@ -153,39 +153,101 @@
   }
 }
 /* ==========================================================
-   Apex Brand Watermark
-   ========================================================== */
+   Apex Living Watermark
+========================================================== */
 
 .brand-watermark {
-  width: clamp(18rem, 34vw, 36rem);
-  opacity: 0.04;
+  width: clamp(18rem, 34vw, 34rem);
+
+  opacity: .028;
+
+  filter:
+      saturate(.92)
+      brightness(.96);
+
+  animation:
+      watermarkFloat 16s ease-in-out infinite,
+      watermarkGlow 18s ease-in-out infinite;
+
+  transform-origin: center center;
+
+  will-change:
+      transform,
+      opacity,
+      filter;
 }
 
-.brand-watermark__image {
-  transform-origin: center;
-  animation: brand-watermark-drift 16s ease-in-out infinite;
-  will-change: transform, opacity;
+.brand-watermark img{
+    display:block;
 }
 
-@keyframes brand-watermark-drift {
-  0%,
-  100% {
-    opacity: 0.7;
-    transform: translate3d(0, 4px, 0) scale(0.99) rotate(-0.15deg);
-  }
+/* Slow movement */
 
-  50% {
-    opacity: 1;
-    transform: translate3d(-5px, -8px, 0) scale(1.02) rotate(0.15deg);
-  }
+@keyframes watermarkFloat{
+
+    0%,100%{
+
+        transform:
+            translateY(10px)
+            rotate(-1deg)
+            scale(.985);
+
+    }
+
+    50%{
+
+        transform:
+            translateY(-10px)
+            rotate(.75deg)
+            scale(1.015);
+
+    }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .brand-watermark__image {
-    opacity: 0.85;
-    animation: none;
-    transform: none;
-  }
+/* Very gentle pulse */
+
+@keyframes watermarkGlow{
+
+    0%,100%{
+
+        opacity:.024;
+
+        filter:
+
+            brightness(.95)
+
+            saturate(.92)
+
+            drop-shadow(0 0 0 rgba(201,150,50,0));
+
+    }
+
+    50%{
+
+        opacity:.055;
+
+        filter:
+
+            brightness(1.02)
+
+            saturate(1)
+
+            drop-shadow(0 0 18px rgba(201,150,50,.16));
+
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce){
+
+    .brand-watermark{
+
+        animation:none;
+
+        opacity:.04;
+
+    }
+
 }
 /* ==========================================
    Apex Logo Hover
