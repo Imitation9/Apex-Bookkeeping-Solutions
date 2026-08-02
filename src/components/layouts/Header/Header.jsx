@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
 import Logo from "../Logo/Logo";
-import Navigation from "../Navigation/Navigation";
 import MobileMenu from "../MobileMenu/MobileMenu";
+import Navigation from "../Navigation/Navigation";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,13 +29,15 @@ export default function Header() {
         "relative sticky top-0 z-50 border-b transition-all duration-300",
         isScrolled
           ? "border-slate-200/90 bg-white/95 shadow-sm backdrop-blur-xl"
-          : "border-transparent bg-white/85 backdrop-blur-md",
+          : "border-apex-gold/25 bg-white/90 backdrop-blur-md",
       ].join(" ")}
     >
       <div
         className={[
           "mx-auto flex max-w-7xl items-center justify-between px-5 transition-all duration-300 sm:px-6 lg:px-8",
-          isScrolled ? "min-h-[72px]" : "min-h-[82px]",
+          isScrolled
+            ? "min-h-[74px] py-2"
+            : "min-h-[84px] py-2.5",
         ].join(" ")}
       >
         <Logo />
