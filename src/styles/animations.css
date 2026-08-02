@@ -187,3 +187,22 @@
     transform: none;
   }
 }
+/* ==========================================
+   Apex Logo Hover
+========================================== */
+
+@keyframes apexLogoGlow {
+
+  0%,
+  100% {
+    filter: drop-shadow(0 0 0 rgba(201, 150, 50, 0));
+  }
+
+  50% {
+    filter: drop-shadow(0 4px 14px rgba(201, 150, 50, 0.22));
+  }
+}
+
+.group:hover img {
+  animation: apexLogoGlow 1.6s ease;
+}
