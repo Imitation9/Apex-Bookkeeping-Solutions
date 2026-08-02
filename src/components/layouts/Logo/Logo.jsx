@@ -14,7 +14,7 @@ export default function Logo() {
         alt=""
         aria-hidden="true"
         draggable="false"
-        className="h-12 w-12 shrink-0 object-contain transition-transform duration-300 group-hover:scale-[1.04] sm:h-[3.75rem] sm:w-[3.75rem]"
+        className="h-14 w-14 shrink-0 object-contain transition-transform duration-300 group-hover:scale-[1.04] sm:h-16 sm:w-16"
       />
 
       <div className="min-w-0">
