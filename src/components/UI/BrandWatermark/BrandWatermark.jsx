@@ -6,7 +6,8 @@ export default function BrandWatermark({
 }) {
   const positions = {
     left: "-left-24 top-1/2 -translate-y-1/2",
-    center: "left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2",
+    center:
+      "left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2",
     right: "-right-24 top-1/2 -translate-y-1/2",
   };
 
@@ -16,14 +17,16 @@ export default function BrandWatermark({
         "brand-watermark pointer-events-none absolute -z-10 select-none",
         positions[position] ?? positions.right,
         className,
-      ].join(" ")}
+      ]
+        .filter(Boolean)
+        .join(" ")}
       aria-hidden="true"
     >
       <img
         src={apexMark}
         alt=""
         draggable="false"
-        className="w-full h-auto"
+        className="brand-watermark__image h-auto w-full"
       />
     </div>
   );
