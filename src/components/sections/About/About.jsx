@@ -1,13 +1,12 @@
 import Heading from "../../UI/Heading/Heading";
 import Reveal from "../../UI/Reveal/Reveal";
 import Section from "../../UI/Section/Section";
+import BrandWatermark from "../../UI/BrandWatermark/BrandWatermark";
 
 import { SITE } from "../../../config/site";
 
 import Credentials from "./Credentials";
 import Values from "./Values";
-
-import BrandWatermark from "../../UI/BrandWatermark/BrandWatermark";
 
 export default function About() {
   return (
@@ -21,12 +20,12 @@ export default function About() {
         position="right"
         className="hidden lg:block"
       />
+
       <div
         className="pointer-events-none absolute -left-32 bottom-10 -z-10 h-80 w-80 rounded-full bg-apex-gold/10 blur-3xl"
         aria-hidden="true"
       />
-  </Section>
-);
+
       <div className="grid items-start gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16 xl:gap-24">
         <div>
           <Reveal animation="up">
