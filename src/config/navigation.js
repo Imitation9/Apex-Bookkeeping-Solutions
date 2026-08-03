@@ -12,7 +12,7 @@ export const navigation = [
     href: "#about",
   },
   {
-    label: "Our Process",
+    label: "How It Works",
     href: "#process",
   },
   {
