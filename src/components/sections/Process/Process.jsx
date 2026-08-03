@@ -86,25 +86,33 @@ export default function Process() {
           </Reveal>
         </div>
 
-        <ol className="relative">
+        <div className="relative">
           <span
             className="absolute bottom-12 left-7 top-7 hidden w-px bg-gradient-to-b from-apex-gold via-apex-gold/60 to-slate-200 sm:block"
             aria-hidden="true"
           />
 
-          {processSteps.map((step, index) => (
-            <Reveal
-              key={step.number}
-              animation="up"
-              delay={index * 90}
-            >
-              <ProcessStep
-                {...step}
-                isLast={index === processSteps.length - 1}
-              />
-            </Reveal>
-          ))}
-        </ol>
+          <ol className="relative">
+            {processSteps.map((step, index) => (
+              <Reveal
+                as="li"
+                key={step.number}
+                animation="up"
+                delay={index * 90}
+                className={
+                  index === processSteps.length - 1
+                    ? ""
+                    : "pb-8 sm:pb-10"
+                }
+              >
+                <ProcessStep
+                  {...step}
+                  isLast={index === processSteps.length - 1}
+                />
+              </Reveal>
+            ))}
+          </ol>
+        </div>
       </div>
     </Section>
   );
