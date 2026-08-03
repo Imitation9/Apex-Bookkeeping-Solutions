@@ -1,22 +1,16 @@
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import MainLayout from "./components/layouts/MainLayout";
+import MainLayout from "./components/layouts/MainLayout/MainLayout";
 import Home from "./pages/Home";
 
-function App() {
+export default function App() {
   return (
-    <BrowserRouter basename="/Apex-Bookkeeping-Solutions">
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<MainLayout />}>
+        <Route element={<MainLayout />}>
           <Route index element={<Home />} />
         </Route>
       </Routes>
     </BrowserRouter>
   );
 }
-
-export default App;
