@@ -39,11 +39,11 @@ export default function DirectContact() {
             </span>
 
             <span>
-              <span className="block text-sm text-slate-400">
+              <span className="block text-sm text-slate-300">
                 Phone
               </span>
 
-              <span className="font-semibold">
+              <span className="font-semibold text-white">
                 {SITE.phoneDisplay}
               </span>
             </span>
@@ -58,11 +58,11 @@ export default function DirectContact() {
             </span>
 
             <span className="min-w-0">
-              <span className="block text-sm text-slate-400">
+              <span className="block text-sm text-slate-300">
                 Email
               </span>
 
-              <span className="break-all font-semibold sm:break-normal">
+              <span className="break-all font-semibold text-white sm:break-normal">
                 {SITE.emailDisplay}
               </span>
             </span>
@@ -74,11 +74,11 @@ export default function DirectContact() {
             </span>
 
             <span>
-              <span className="block text-sm text-slate-400">
+              <span className="block text-sm text-slate-300">
                 Location
               </span>
 
-              <span className="font-semibold">
+              <span className="font-semibold text-white">
                 {SITE.location}
               </span>
             </span>
