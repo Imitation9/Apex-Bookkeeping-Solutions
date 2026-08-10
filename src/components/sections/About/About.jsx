@@ -116,39 +116,33 @@ export default function About() {
 
         <div className="space-y-8">
           <Reveal animation="right" delay={100}>
-            <div className="overflow-hidden rounded-3xl border border-apex-gold/20 bg-white shadow-xl">
-              <div className="relative">
+              <div className="rounded-3xl border border-apex-gold/20 bg-white p-5 shadow-lg">
+              <div className="flex items-center gap-5">
                 <img
                   src={headshot}
                   alt="Robert L. Young, founder of Apex Bookkeeping Solutions"
-                  className="aspect-[4/5] w-full object-cover object-top"
-                />
+                  className="h-28 w-28 shrink-0 rounded-2xl object-cover object-top shadow-md ring-1 ring-apex-gold/20"
+                  />
 
-                <div
-                  className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-apex-navy/70 to-transparent"
-                  aria-hidden="true"
-                />
+              <div>
+                 <p className="text-xs font-bold uppercase tracking-[0.18em] text-apex-gold">
+                      Meet Robert
+                 </p>
+
+                 <h3 className="mt-1 text-xl font-bold tracking-tight text-apex-navy">
+                      Robert L. Young
+                 </h3>
+
+                 <p className="mt-1 text-sm font-semibold text-slate-700">
+                      Founder | Apex Bookkeeping Solutions
+                 </p>
+
+                 <p className="mt-1 text-sm font-semibold text-apex-gold">
+                      Advanced QuickBooks Online ProAdvisor
+                 </p>
               </div>
-
-              <div className="border-t border-apex-gold/20 bg-white p-6 sm:p-7">
-                <p className="text-sm font-bold uppercase tracking-[0.18em] text-apex-gold">
-                  Meet Robert
-                </p>
-
-                <h3 className="mt-2 text-2xl font-bold tracking-tight text-apex-navy">
-                  Robert L. Young
-                </h3>
-
-                <p className="mt-1 font-semibold text-slate-700">
-                  Founder | Advanced QuickBooks Online ProAdvisor
-                </p>
-
-                <p className="mt-4 leading-7 text-slate-600">
-                  Bringing more than 23 years of professional accounting and
-                  fund management experience to every client relationship.
-                </p>
               </div>
-            </div>
+              </div>
           </Reveal>
 
           <Reveal animation="right" delay={180}>
