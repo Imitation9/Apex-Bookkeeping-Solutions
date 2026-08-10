@@ -28,8 +28,48 @@ export default function About() {
         aria-hidden="true"
       />
 
-      <div className="grid items-start gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16 xl:gap-24">
-        <div>
+      <div className="grid items-start gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16 xl:gap-24">
+        {/* Founder + Credentials
+            Appears second on mobile, first on desktop */}
+        <div className="order-2 space-y-8 lg:order-1">
+          <Reveal animation="left" delay={100}>
+            <div className="rounded-3xl border border-apex-gold/20 bg-white p-5 shadow-lg">
+              <div className="flex flex-col items-center gap-5 sm:flex-row sm:items-center">
+                <img
+                  src={headshot}
+                  alt="Robert L. Young, founder of Apex Bookkeeping Solutions"
+                  className="h-28 w-28 shrink-0 rounded-2xl object-cover object-top shadow-md ring-1 ring-apex-gold/20"
+                />
+
+                <div className="text-center sm:text-left">
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-apex-gold">
+                    Meet Robert
+                  </p>
+
+                  <h3 className="mt-1 text-xl font-bold tracking-tight text-apex-navy">
+                    Robert L. Young
+                  </h3>
+
+                  <p className="mt-1 text-sm font-semibold text-slate-700">
+                    Founder | Apex Bookkeeping Solutions
+                  </p>
+
+                  <p className="mt-1 text-sm font-semibold text-apex-gold">
+                    Advanced QuickBooks Online ProAdvisor
+                  </p>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+
+          <Reveal animation="left" delay={180}>
+            <Credentials />
+          </Reveal>
+        </div>
+
+        {/* Why Apex Narrative
+            Appears first on mobile, second on desktop */}
+        <div className="order-1 lg:order-2">
           <Reveal animation="up">
             <Heading
               eyebrow="Why Apex"
@@ -111,42 +151,6 @@ export default function About() {
                 See Who We Serve
               </a>
             </div>
-          </Reveal>
-        </div>
-
-        <div className="space-y-8">
-          <Reveal animation="right" delay={100}>
-            <div className="rounded-3xl border border-apex-gold/20 bg-white p-5 shadow-lg">
-              <div className="flex flex-col items-center gap-5 sm:flex-row sm:items-center">
-                <img
-                  src={headshot}
-                  alt="Robert L. Young, founder of Apex Bookkeeping Solutions"
-                  className="h-28 w-28 shrink-0 rounded-2xl object-cover object-top shadow-md ring-1 ring-apex-gold/20"
-                />
-
-                <div className="text-center sm:text-left">
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-apex-gold">
-                    Meet Robert
-                  </p>
-
-                  <h3 className="mt-1 text-xl font-bold tracking-tight text-apex-navy">
-                    Robert L. Young
-                  </h3>
-
-                  <p className="mt-1 text-sm font-semibold text-slate-700">
-                    Founder | Apex Bookkeeping Solutions
-                  </p>
-
-                  <p className="mt-1 text-sm font-semibold text-apex-gold">
-                    Advanced QuickBooks Online ProAdvisor
-                  </p>
-                </div>
-              </div>
-            </div>
-          </Reveal>
-
-          <Reveal animation="right" delay={180}>
-            <Credentials />
           </Reveal>
         </div>
       </div>
