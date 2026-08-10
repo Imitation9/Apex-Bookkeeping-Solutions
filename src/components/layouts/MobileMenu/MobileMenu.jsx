@@ -116,7 +116,7 @@ export default function MobileMenu() {
             <a
               href={SITE.emailHref}
               onClick={closeMenu}
-              className="mb-3 flex min-h-11 items-center justify-center rounded-xl border border-apex-navy bg-apex-navy px-5 py-3 text-sm font-bold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-apex-gold hover:bg-apex-blue hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apex-gold focus-visible:ring-offset-2"
+              className="mb-3 flex min-h-11 items-center justify-center rounded-xl border border-apex-navy bg-apex-navy px-5 py-3 text-sm font-bold !text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-apex-gold hover:bg-apex-blue hover:!text-white hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apex-gold focus-visible:ring-offset-2"
             >
               Email Robert
             </a>
