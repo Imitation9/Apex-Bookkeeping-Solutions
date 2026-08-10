@@ -114,6 +114,14 @@ export default function MobileMenu() {
             </a>
 
             <a
+              href={`mailto:${SITE.email}`}
+              onClick={closeMenu}
+              className="..."
+            >
+              Email Robert
+            </a>
+
+            <a
               href={SITE.calendly}
               target="_blank"
               rel="noopener noreferrer"
