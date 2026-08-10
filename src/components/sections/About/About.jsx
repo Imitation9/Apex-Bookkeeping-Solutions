@@ -116,33 +116,33 @@ export default function About() {
 
         <div className="space-y-8">
           <Reveal animation="right" delay={100}>
-              <div className="rounded-3xl border border-apex-gold/20 bg-white p-5 shadow-lg">
-              <div className="flex items-center gap-5">
+            <div className="rounded-3xl border border-apex-gold/20 bg-white p-5 shadow-lg">
+              <div className="flex flex-col items-center gap-5 sm:flex-row sm:items-center">
                 <img
                   src={headshot}
                   alt="Robert L. Young, founder of Apex Bookkeeping Solutions"
                   className="h-28 w-28 shrink-0 rounded-2xl object-cover object-top shadow-md ring-1 ring-apex-gold/20"
-                  />
+                />
 
-              <div>
-                 <p className="text-xs font-bold uppercase tracking-[0.18em] text-apex-gold">
-                      Meet Robert
-                 </p>
+                <div className="text-center sm:text-left">
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-apex-gold">
+                    Meet Robert
+                  </p>
 
-                 <h3 className="mt-1 text-xl font-bold tracking-tight text-apex-navy">
-                      Robert L. Young
-                 </h3>
+                  <h3 className="mt-1 text-xl font-bold tracking-tight text-apex-navy">
+                    Robert L. Young
+                  </h3>
 
-                 <p className="mt-1 text-sm font-semibold text-slate-700">
-                      Founder | Apex Bookkeeping Solutions
-                 </p>
+                  <p className="mt-1 text-sm font-semibold text-slate-700">
+                    Founder | Apex Bookkeeping Solutions
+                  </p>
 
-                 <p className="mt-1 text-sm font-semibold text-apex-gold">
-                      Advanced QuickBooks Online ProAdvisor
-                 </p>
+                  <p className="mt-1 text-sm font-semibold text-apex-gold">
+                    Advanced QuickBooks Online ProAdvisor
+                  </p>
+                </div>
               </div>
-              </div>
-              </div>
+            </div>
           </Reveal>
 
           <Reveal animation="right" delay={180}>
