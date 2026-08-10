@@ -8,7 +8,10 @@ import { SITE } from "../../../config/site";
 
 export default function DirectContact() {
   return (
-    <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 sm:p-8">
+    <div
+      id="contact"
+      className="scroll-mt-24 rounded-3xl border border-white/10 bg-white/[0.04] p-6 sm:p-8"
+    >
       <div className="grid gap-8 lg:grid-cols-[1.15fr_1fr] lg:items-center">
         <div>
           <p className="text-sm font-bold uppercase tracking-[0.18em] text-apex-gold-light">
@@ -36,7 +39,10 @@ export default function DirectContact() {
             </span>
 
             <span>
-              <span className="block text-sm text-slate-400">Phone</span>
+              <span className="block text-sm text-slate-400">
+                Phone
+              </span>
+
               <span className="font-semibold">
                 {SITE.phoneDisplay}
               </span>
@@ -52,7 +58,10 @@ export default function DirectContact() {
             </span>
 
             <span className="min-w-0">
-              <span className="block text-sm text-slate-400">Email</span>
+              <span className="block text-sm text-slate-400">
+                Email
+              </span>
+
               <span className="break-all font-semibold sm:break-normal">
                 {SITE.emailDisplay}
               </span>
@@ -65,7 +74,10 @@ export default function DirectContact() {
             </span>
 
             <span>
-              <span className="block text-sm text-slate-400">Location</span>
+              <span className="block text-sm text-slate-400">
+                Location
+              </span>
+
               <span className="font-semibold">
                 {SITE.location}
               </span>
