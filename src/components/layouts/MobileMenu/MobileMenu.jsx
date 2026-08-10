@@ -77,7 +77,7 @@ export default function MobileMenu() {
         className={[
           "absolute inset-x-0 top-full overflow-hidden border-t bg-white shadow-xl transition-all duration-300",
           isOpen
-            ? "visible max-h-[600px] border-slate-200 opacity-100"
+            ? "visible max-h-[700px] border-slate-200 opacity-100"
             : "invisible pointer-events-none max-h-0 border-transparent opacity-0",
         ].join(" ")}
       >
@@ -108,16 +108,15 @@ export default function MobileMenu() {
             <a
               href={SITE.phoneHref}
               onClick={closeMenu}
-              className="mb-3 flex min-h-11 items-center justify-center rounded-xl border border-slate-300 px-5 py-3 text-sm font-bold text-apex-blue transition-colors hover:bg-slate-50"
+              className="mb-3 flex min-h-11 items-center justify-center rounded-xl border border-slate-300 px-5 py-3 text-sm font-bold text-apex-blue transition-all duration-300 hover:-translate-y-0.5 hover:border-apex-gold hover:bg-slate-50"
             >
               Call {SITE.phoneDisplay}
             </a>
 
             <a
-              href={`mailto:{SITE.email}`}
+              href={SITE.emailHref}
               onClick={closeMenu}
-              export const SITE = {
-              className="mb-3 flex min-h-11 items-center justify-center rounded-xl border border-slate-300 px-5 py-3 text-sm font-bold text-apex-blue transition-all duration-300 hover:-translate-y-0.5 hover:border-apex-gold hover:bg-slate-50">
+              className="mb-3 flex min-h-11 items-center justify-center rounded-xl border border-slate-300 px-5 py-3 text-sm font-bold text-apex-blue transition-all duration-300 hover:-translate-y-0.5 hover:border-apex-gold hover:bg-slate-50"
             >
               Email Robert
             </a>
@@ -126,6 +125,7 @@ export default function MobileMenu() {
               href={SITE.calendly}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={closeMenu}
               className="flex min-h-12 items-center justify-center rounded-xl bg-apex-gold px-5 py-3 text-center text-sm font-bold text-apex-navy shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-xl"
             >
               Schedule a Free Consultation
