@@ -9,18 +9,18 @@ import Credentials from "./Credentials";
 import Values from "./Values";
 
 import apexMark from "../../../assets/logo/apex-mark.png";
+import headshot from "../../../assets/images/ryounghead.png";
 
 export default function About() {
   return (
     <Section
       id="about"
-      background="mist"
-      spacing="spacious"
-      className="relative isolate overflow-hidden"
+      className="relative overflow-hidden"
     >
       <BrandWatermark
+        src={apexMark}
         position="right"
-        className="hidden opacity-80 lg:block"
+        opacity={0.035}
       />
 
       <div
@@ -114,9 +114,47 @@ export default function About() {
           </Reveal>
         </div>
 
-        <Reveal animation="right" delay={140}>
-          <Credentials />
-        </Reveal>
+        <div className="space-y-8">
+          <Reveal animation="right" delay={100}>
+            <div className="overflow-hidden rounded-3xl border border-apex-gold/20 bg-white shadow-xl">
+              <div className="relative">
+                <img
+                  src={headshot}
+                  alt="Robert L. Young, founder of Apex Bookkeeping Solutions"
+                  className="aspect-[4/5] w-full object-cover object-top"
+                />
+
+                <div
+                  className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-apex-navy/70 to-transparent"
+                  aria-hidden="true"
+                />
+              </div>
+
+              <div className="border-t border-apex-gold/20 bg-white p-6 sm:p-7">
+                <p className="text-sm font-bold uppercase tracking-[0.18em] text-apex-gold">
+                  Meet Robert
+                </p>
+
+                <h3 className="mt-2 text-2xl font-bold tracking-tight text-apex-navy">
+                  Robert L. Young
+                </h3>
+
+                <p className="mt-1 font-semibold text-slate-700">
+                  Founder | Advanced QuickBooks Online ProAdvisor
+                </p>
+
+                <p className="mt-4 leading-7 text-slate-600">
+                  Bringing more than 23 years of professional accounting and
+                  fund management experience to every client relationship.
+                </p>
+              </div>
+            </div>
+          </Reveal>
+
+          <Reveal animation="right" delay={180}>
+            <Credentials />
+          </Reveal>
+        </div>
       </div>
 
       <Values />
