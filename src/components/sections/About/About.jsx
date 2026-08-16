@@ -86,33 +86,42 @@ export default function About() {
                 <strong className="text-apex-navy">
                   23 years
                 </strong>
-                , Robert L. Young has served in financial leadership roles
-                where accuracy, accountability, and responsible stewardship
-                were expected every day.
+                , Robert L. Young has built a career in Arkansas governmental
+                accounting, progressing from hands-on accounting roles into
+                financial management and supervisory leadership.
               </p>
 
               <p className="mt-6 text-lg leading-8 text-slate-700">
-                Managing public funds, developing budgets, administering grant
-                programs, strengthening internal controls, and producing
-                dependable financial reports required precision, transparency,
-                and a commitment to protecting the organizations served.
+                His experience includes helping lead financial operations for
+                a public-sector division with an approximately{" "}
+                <strong className="text-apex-navy">
+                  $75 million budget
+                </strong>
+                , along with extensive work in budgeting, grant-funded
+                programs, reconciliations, financial reporting, purchasing,
+                audit support, and internal controls.
               </p>
 
               <p className="mt-6 text-lg leading-8 text-slate-700">
-                Those same principles became the foundation of{" "}
+                That experience and those same principles became the foundation
+                of{" "}
                 <strong className="text-apex-navy">
                   Apex Bookkeeping Solutions
                 </strong>
                 . Today, Apex supports nonprofits, startups, and small
                 businesses seeking organized financial records, meaningful
-                reporting, and dependable long-term partnership.
+                reporting, stronger financial controls, and a dependable
+                long-term partner.
               </p>
 
               <p className="mt-6 text-lg leading-8 text-slate-700">
                 Whether bringing overdue books current, implementing
                 QuickBooks Online, or supporting ongoing financial operations,
-                every engagement is guided by professionalism, integrity, and
-                attention to detail.
+                Apex approaches the work with a simple principle: accuracy is
+                more than making the numbers balance. When something does not
+                reconcile, the goal is to understand why, correct the
+                underlying issue, and leave the financial records more reliable
+                than they were before.
               </p>
             </div>
           </Reveal>
