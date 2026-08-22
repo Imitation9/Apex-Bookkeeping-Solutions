@@ -7,7 +7,7 @@ export default function Logo() {
     <Link
       to="/"
       aria-label="Apex Bookkeeping Solutions home"
-      className="group flex min-w-0 items-center gap-4 rounded-lg transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apex-gold focus-visible:ring-offset-4"
+      className="group flex min-w-0 items-center gap-3 rounded-lg transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apex-gold focus-visible:ring-offset-4 sm:gap-4"
     >
       <img
         src={apexMark}
@@ -15,7 +15,7 @@ export default function Logo() {
         aria-hidden="true"
         draggable="false"
         className="
-          h-14 w-14 shrink-0 object-contain
+          h-12 w-12 shrink-0 object-contain
           transition-all duration-500 ease-out
           group-hover:-translate-y-[2px]
           group-hover:scale-[1.045]
@@ -28,7 +28,7 @@ export default function Logo() {
           className="
             whitespace-nowrap
             pb-0.5
-            text-[1.05rem]
+            text-[0.95rem]
             font-semibold
             leading-[1.4]
             tracking-[-0.01em]
