@@ -2,11 +2,11 @@ import Hero from "../components/sections/Hero/Hero";
 import TrustBar from "../components/sections/Hero/TrustBar";
 import Services from "../components/sections/Services/Services";
 import Audiences from "../components/sections/Audiences/Audiences";
+import Pricing from "../components/sections/Pricing/Pricing";
 import About from "../components/sections/About/About";
 import Process from "../components/sections/Process/Process";
 import FAQ from "../components/sections/FAQ/FAQ";
 import Consultation from "../components/sections/Consultation/Consultation";
-import Pricing from "../components/sections/Pricing/Pricing";
 
 export default function Home() {
   return (
