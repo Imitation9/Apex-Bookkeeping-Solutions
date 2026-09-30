@@ -68,13 +68,55 @@ const businessPackages = [
   {
     name: "Financial Advisory",
     description:
-  "Separately scoped financial guidance for owners who need deeper insight to support planning and decision-making.",
+      "Separately scoped financial guidance for owners who need deeper insight to support planning and decision-making.",
     price: "Custom pricing",
     features: [
       "Cash-flow forecasting",
       "KPI reporting",
       "Budgeting and forecasting",
       "Management-level financial analysis",
+    ],
+  },
+];
+
+const projectServices = [
+  {
+    name: "New QuickBooks Setup",
+    description:
+      "For organizations starting fresh in QuickBooks Online or moving from spreadsheets and manual records.",
+    features: [
+      "QuickBooks Online company setup",
+      "Chart of accounts design",
+      "Bank and credit card connections",
+      "Opening balances",
+      "Classes, funds, and tracking structure as needed",
+      "Initial workflow configuration",
+    ],
+  },
+  {
+    name: "Conversion & Transition",
+    description:
+      "For organizations moving from another accounting system or transitioning to a new bookkeeping structure.",
+    features: [
+      "Existing records review",
+      "Conversion and cutoff planning",
+      "Chart of accounts mapping",
+      "Opening balances and historical data strategy",
+      "Account and tracking configuration",
+      "Post-conversion review and reconciliation",
+    ],
+  },
+  {
+    name: "Cleanup & Catch-Up",
+    description:
+      "For organizations already using QuickBooks whose books need attention before reliable ongoing bookkeeping can begin.",
+    features: [
+      "Uncategorized transaction review",
+      "Account reconciliation",
+      "Chart of accounts cleanup",
+      "Balance and classification review",
+      "Prior-period catch-up",
+      "Preparation for ongoing bookkeeping",
     ],
   },
 ];
@@ -191,6 +233,53 @@ function PricingGroup({ eyebrow, title, description, packages }) {
   );
 }
 
+function ProjectServiceCard({ service }) {
+  return (
+    <article className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+      <h4 className="text-xl font-bold text-apex-navy">
+        {service.name}
+      </h4>
+
+      <p className="mt-3 text-sm leading-6 text-slate-600">
+        {service.description}
+      </p>
+
+      <div className="my-6 h-px bg-slate-200" />
+
+      <ul className="flex-1 space-y-3">
+        {service.features.map((feature) => (
+          <li
+            key={feature}
+            className="flex gap-3 text-sm leading-5"
+          >
+            <span
+              aria-hidden="true"
+              className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#FFF9EE] text-xs font-bold text-apex-gold"
+            >
+              ✓
+            </span>
+
+            <span className="text-slate-700">
+              {feature}
+            </span>
+          </li>
+        ))}
+      </ul>
+
+      <p className="mt-7 text-lg font-bold text-apex-navy">
+        Custom project pricing
+      </p>
+
+      <a
+        href="#consultation"
+        className="mt-5 flex min-h-12 items-center justify-center rounded-xl border border-apex-navy px-5 py-3 text-center text-sm font-bold text-apex-navy transition-all duration-300 hover:-translate-y-0.5 hover:bg-apex-navy hover:text-white"
+      >
+        Discuss Your Project
+      </a>
+    </article>
+  );
+}
+
 export default function Pricing() {
   return (
     <section
@@ -228,6 +317,33 @@ export default function Pricing() {
             description="From clean monthly books to expanded bookkeeping and financial insight for growing businesses."
             packages={businessPackages}
           />
+
+          <div>
+            <div className="text-center">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-apex-gold">
+                QuickBooks Projects
+              </p>
+
+              <h3 className="mt-2 text-2xl font-bold text-apex-navy sm:text-3xl">
+                Need help getting your books ready first?
+              </h3>
+
+              <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-slate-600 sm:text-base">
+                Whether you're starting fresh, moving to QuickBooks Online, or
+                correcting existing books, Apex can build a stronger foundation
+                before ongoing bookkeeping begins.
+              </p>
+            </div>
+
+            <div className="mt-9 grid gap-6 lg:grid-cols-3">
+              {projectServices.map((service) => (
+                <ProjectServiceCard
+                  key={service.name}
+                  service={service}
+                />
+              ))}
+            </div>
+          </div>
         </div>
 
         <div className="mx-auto mt-16 max-w-4xl rounded-2xl border border-apex-gold/40 bg-white/70 px-6 py-6 text-center sm:px-10">
