@@ -5,7 +5,11 @@ export const navigation = [
   },
   {
     label: "Who We Serve",
-    href: "#who-we-serve",
+    href: "#audiences",
+  },
+  {
+    label: "Pricing",
+    href: "#pricing",
   },
   {
     label: "Why Apex",
