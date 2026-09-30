@@ -68,7 +68,7 @@ const businessPackages = [
   {
     name: "Financial Advisory",
     description:
-      "For owners who need deeper financial insight to support planning and decision-making.",
+  "Separately scoped financial guidance for owners who need deeper insight to support planning and decision-making.",
     price: "Custom pricing",
     features: [
       "Cash-flow forecasting",
