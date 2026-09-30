@@ -61,8 +61,8 @@ const businessPackages = [
     features: [
       "Everything in Essential Books",
       "Accounts payable and receivable support",
-      "Inventory-related bookkeeping support",
-      "Expanded financial reporting",
+      "Inventory accounting support",
+      "Enhanced financial reporting",
     ],
   },
   {
@@ -89,13 +89,7 @@ function PricingCard({ pkg }) {
           : "border-slate-200 bg-white text-apex-navy shadow-sm hover:-translate-y-1 hover:shadow-md",
       ].join(" ")}
     >
-      {pkg.featured && (
-        <span className="absolute right-5 top-5 rounded-full bg-apex-gold px-3 py-1 text-[0.65rem] font-bold uppercase tracking-[0.12em] text-apex-navy">
-          Enhanced Support
-        </span>
-      )}
-
-      <h4 className="pr-24 text-xl font-bold">
+      <h4 className="text-xl font-bold">
         {pkg.name}
       </h4>
 
