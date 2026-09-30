@@ -1,3 +1,202 @@
+const nonprofitPackages = [
+  {
+    name: "Nonprofit Essentials",
+    description:
+      "For smaller organizations that need dependable monthly financials.",
+    price: "Starting around $450/month",
+    features: [
+      "Monthly reconciliations",
+      "Financial statements",
+      "Fund tracking",
+      "Board-ready reporting",
+    ],
+  },
+  {
+    name: "Fund & Grant Management",
+    description:
+      "For organizations managing grants, restricted funding, or multiple programs.",
+    price: "Starting around $750/month",
+    featured: true,
+    features: [
+      "Everything in Nonprofit Essentials",
+      "Restricted and unrestricted fund tracking",
+      "Grant expenditure tracking",
+      "Budget-to-actual reporting",
+    ],
+  },
+  {
+    name: "Financial Oversight & Advisory",
+    description:
+      "For growing organizations needing stronger reporting, controls, and financial guidance.",
+    price: "Custom pricing",
+    features: [
+      "Everything in Fund & Grant Management",
+      "Internal-control assessment",
+      "Audit-readiness support",
+      "Advanced reporting",
+      "Leadership and board advisory",
+    ],
+  },
+];
+
+const businessPackages = [
+  {
+    name: "Essential Books",
+    description:
+      "For businesses that need clean, reconciled monthly books and reliable financial statements.",
+    price: "Starting around $350/month",
+    features: [
+      "Monthly transaction categorization",
+      "Bank and credit card reconciliations",
+      "Monthly financial statements",
+      "Ongoing QuickBooks support",
+    ],
+  },
+  {
+    name: "Growth Bookkeeping",
+    description:
+      "For businesses with inventory, AP/AR, multiple revenue streams, or greater reporting needs.",
+    price: "Starting around $600/month",
+    featured: true,
+    features: [
+      "Everything in Essential Books",
+      "Accounts payable and receivable support",
+      "Inventory-related bookkeeping support",
+      "Expanded financial reporting",
+    ],
+  },
+  {
+    name: "Financial Advisory",
+    description:
+      "For owners who need deeper financial insight to support planning and decision-making.",
+    price: "Custom pricing",
+    features: [
+      "Cash-flow forecasting",
+      "KPI reporting",
+      "Budgeting and forecasting",
+      "Management-level financial analysis",
+    ],
+  },
+];
+
+function PricingCard({ pkg }) {
+  return (
+    <article
+      className={[
+        "relative flex h-full flex-col rounded-2xl border p-7 transition-all duration-300",
+        pkg.featured
+          ? "border-apex-gold bg-apex-navy text-white shadow-lg lg:-translate-y-2"
+          : "border-slate-200 bg-white text-apex-navy shadow-sm hover:-translate-y-1 hover:shadow-md",
+      ].join(" ")}
+    >
+      {pkg.featured && (
+        <span className="absolute right-5 top-5 rounded-full bg-apex-gold px-3 py-1 text-[0.65rem] font-bold uppercase tracking-[0.12em] text-apex-navy">
+          Enhanced Support
+        </span>
+      )}
+
+      <h4 className="pr-24 text-xl font-bold">
+        {pkg.name}
+      </h4>
+
+      <p
+        className={[
+          "mt-3 text-sm leading-6",
+          pkg.featured ? "text-slate-200" : "text-slate-600",
+        ].join(" ")}
+      >
+        {pkg.description}
+      </p>
+
+      <p
+        className={[
+          "mt-6 text-xl font-bold",
+          pkg.featured ? "text-apex-gold" : "text-apex-navy",
+        ].join(" ")}
+      >
+        {pkg.price}
+      </p>
+
+      <div
+        className={[
+          "my-6 h-px",
+          pkg.featured ? "bg-white/15" : "bg-slate-200",
+        ].join(" ")}
+      />
+
+      <ul className="flex-1 space-y-3">
+        {pkg.features.map((feature) => (
+          <li
+            key={feature}
+            className="flex gap-3 text-sm leading-5"
+          >
+            <span
+              aria-hidden="true"
+              className={[
+                "mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-xs font-bold",
+                pkg.featured
+                  ? "bg-apex-gold text-apex-navy"
+                  : "bg-[#FFF9EE] text-apex-gold",
+              ].join(" ")}
+            >
+              ✓
+            </span>
+
+            <span
+              className={
+                pkg.featured ? "text-slate-100" : "text-slate-700"
+              }
+            >
+              {feature}
+            </span>
+          </li>
+        ))}
+      </ul>
+
+      <a
+        href="#consultation"
+        className={[
+          "mt-8 flex min-h-12 items-center justify-center rounded-xl px-5 py-3 text-center text-sm font-bold transition-all duration-300 hover:-translate-y-0.5",
+          pkg.featured
+            ? "bg-apex-gold text-apex-navy hover:brightness-105"
+            : "border border-apex-navy text-apex-navy hover:bg-apex-navy hover:text-white",
+        ].join(" ")}
+      >
+        Schedule a Free Consultation
+      </a>
+    </article>
+  );
+}
+
+function PricingGroup({ eyebrow, title, description, packages }) {
+  return (
+    <div>
+      <div className="text-center">
+        <p className="text-xs font-bold uppercase tracking-[0.2em] text-apex-gold">
+          {eyebrow}
+        </p>
+
+        <h3 className="mt-2 text-2xl font-bold text-apex-navy sm:text-3xl">
+          {title}
+        </h3>
+
+        <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-slate-600 sm:text-base">
+          {description}
+        </p>
+      </div>
+
+      <div className="mt-9 grid gap-6 lg:grid-cols-3">
+        {packages.map((pkg) => (
+          <PricingCard
+            key={pkg.name}
+            pkg={pkg}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function Pricing() {
   return (
     <section
@@ -11,12 +210,42 @@ export default function Pricing() {
           </p>
 
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-apex-navy sm:text-4xl">
-            Support built around your organization.
+            Bookkeeping built around your organization.
           </h2>
 
           <p className="mt-5 text-base leading-7 text-slate-600 sm:text-lg">
-            Clear starting points with bookkeeping services tailored to your
-            organization, financial needs, and level of complexity.
+            Clear starting points for dependable bookkeeping, stronger
+            financial reporting, and the level of support your organization
+            needs.
+          </p>
+        </div>
+
+        <div className="mx-auto mt-16 max-w-6xl space-y-20">
+          <PricingGroup
+            eyebrow="For Nonprofits"
+            title="Financial support for mission-driven organizations"
+            description="From dependable monthly financials to fund, grant, reporting, and advisory support."
+            packages={nonprofitPackages}
+          />
+
+          <PricingGroup
+            eyebrow="For Small Businesses"
+            title="Bookkeeping that can grow with your business"
+            description="From clean monthly books to expanded bookkeeping and financial insight for growing businesses."
+            packages={businessPackages}
+          />
+        </div>
+
+        <div className="mx-auto mt-16 max-w-4xl rounded-2xl border border-apex-gold/40 bg-white/70 px-6 py-6 text-center sm:px-10">
+          <p className="font-bold text-apex-navy">
+            Every organization is different.
+          </p>
+
+          <p className="mt-2 text-sm leading-6 text-slate-600 sm:text-base">
+            Monthly pricing is based on transaction volume, number of accounts,
+            reporting requirements, grants or restricted funds, AP/AR needs,
+            and overall accounting complexity. Cleanup, catch-up, and initial
+            setup work are quoted separately.
           </p>
         </div>
       </div>
