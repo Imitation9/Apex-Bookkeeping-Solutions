@@ -325,13 +325,12 @@ export default function Pricing() {
               </p>
 
               <h3 className="mt-2 text-2xl font-bold text-apex-navy sm:text-3xl">
-                Need help getting your books ready first?
+                Need help getting your books in order?
               </h3>
 
               <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-slate-600 sm:text-base">
-                Whether you're starting fresh, moving to QuickBooks Online, or
-                correcting existing books, Apex can build a stronger foundation
-                before ongoing bookkeeping begins.
+                Whether you're starting fresh, moving to QuickBooks Online, or correcting 
+                existing books, Apex can help build a stronger accounting foundation.
               </p>
             </div>
 
