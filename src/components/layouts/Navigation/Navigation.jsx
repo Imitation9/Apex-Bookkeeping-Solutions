@@ -18,7 +18,7 @@ export default function Navigation() {
       ))}
 
       <Button
-        href="#consultation"
+        href={SITE.calendly}
         size="sm"
         className="ml-3 whitespace-nowrap"
       >
