@@ -1,5 +1,6 @@
 import Button from "../../UI/Button/Button";
 import { navigation } from "../../../config/navigation";
+import { SITE } from "../../../config/site";
 
 export default function Navigation() {
   return (
@@ -19,6 +20,7 @@ export default function Navigation() {
 
       <Button
         href={SITE.calendly}
+        target="_blank"
         size="sm"
         className="ml-3 whitespace-nowrap"
       >
