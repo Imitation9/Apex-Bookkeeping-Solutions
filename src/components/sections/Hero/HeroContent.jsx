@@ -3,7 +3,7 @@ import Reveal from "../../UI/Reveal/Reveal";
 import { SITE } from "../../../config/site";
 
 const trustPoints = [
-  "23+ years of experience",
+  "24+ years of experience",
   "QuickBooks ProAdvisor",
   "Nonprofit-focused expertise",
 ];
