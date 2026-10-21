@@ -55,9 +55,16 @@ export default function About() {
                     Founder | Apex Bookkeeping Solutions
                   </p>
 
-                  <p className="mt-1 text-sm font-semibold text-apex-gold">
+                  <a
+                    href="https://proadvisor.intuit.com/app/accountant/search?searchId=0te3iasyxzxs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="View Robert L. Young's QuickBooks ProAdvisor profile"
+                    aria-label="View Robert L. Young's QuickBooks ProAdvisor profile (opens in a new tab)"
+                    className="mt-1 inline-block rounded text-sm font-semibold text-apex-gold underline decoration-apex-gold/40 underline-offset-4 transition-colors duration-200 hover:text-apex-navy hover:decoration-apex-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apex-gold"
+                  >
                     Advanced QuickBooks Online ProAdvisor
-                  </p>
+                  </a>
                 </div>
               </div>
             </div>
