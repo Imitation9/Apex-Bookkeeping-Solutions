@@ -2,7 +2,7 @@ import Reveal from "../../UI/Reveal/Reveal";
 
 const trustItems = [
   {
-    title: "23+ Years",
+    title: "24+ Years",
     subtitle: "Accounting & Financial Leadership",
   },
   {
