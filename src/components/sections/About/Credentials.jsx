@@ -54,7 +54,7 @@ export default function Credentials() {
         <div className="mt-3 flex items-end gap-3">
           <div className="font-serif text-6xl font-bold leading-none text-white sm:text-7xl">
             <AnimatedNumber
-              value={23}
+              value={24}
               suffix="+"
               duration={1500}
             />
