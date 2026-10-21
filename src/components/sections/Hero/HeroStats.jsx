@@ -3,7 +3,7 @@ import Reveal from "../../UI/Reveal/Reveal";
 
 const heroStats = [
   {
-    value: 23,
+    value: 24,
     suffix: "+",
     label: "Years of Experience",
     detail: "Accounting, budgeting, reporting, and fund management",
