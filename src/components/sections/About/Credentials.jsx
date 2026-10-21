@@ -1,6 +1,8 @@
+
 import {
   Award,
   Building2,
+  ExternalLink,
   HandCoins,
   MapPin,
   ShieldCheck,
@@ -15,6 +17,7 @@ const credentials = [
     title: "QuickBooks ProAdvisor",
     description:
       "Certified QuickBooks Online expertise supporting setup, cleanup, reporting, payroll, and daily financial workflows.",
+    href: "https://proadvisor.intuit.com/app/accountant/search?searchId=0te3iasyxzxs",
   },
   {
     icon: HandCoins,
@@ -72,30 +75,63 @@ export default function Credentials() {
         {credentials.map((credential) => {
           const Icon = credential.icon;
 
-          return (
-            <div
-              key={credential.title}
-              className="rounded-2xl border border-white/10 bg-white/5 p-5 transition duration-300 hover:border-apex-gold/40 hover:bg-white/[0.08]"
-            >
-              <div className="flex items-start gap-4">
-                <span className="inline-flex shrink-0 rounded-xl bg-white/10 p-3 text-apex-gold-light">
-                  <Icon
-                    size={24}
-                    strokeWidth={1.8}
-                    aria-hidden="true"
-                  />
-                </span>
+          const content = (
+            <div className="flex items-start gap-4">
+              <span className="inline-flex shrink-0 rounded-xl bg-white/10 p-3 text-apex-gold-light">
+                <Icon
+                  size={24}
+                  strokeWidth={1.8}
+                  aria-hidden="true"
+                />
+              </span>
 
-                <div>
+              <div className="min-w-0 flex-1">
+                <div className="flex items-center gap-2">
                   <h3 className="text-base font-bold text-white">
                     {credential.title}
                   </h3>
 
-                  <p className="mt-2 text-sm leading-6 text-slate-300">
-                    {credential.description}
-                  </p>
+                  {credential.href && (
+                    <ExternalLink
+                      size={15}
+                      className="shrink-0 text-apex-gold-light"
+                      aria-hidden="true"
+                    />
+                  )}
                 </div>
+
+                <p className="mt-2 text-sm leading-6 text-slate-300">
+                  {credential.description}
+                </p>
               </div>
+            </div>
+          );
+
+          const cardClassName =
+            "block rounded-2xl border border-white/10 bg-white/5 p-5 transition duration-300 hover:border-apex-gold/40 hover:bg-white/[0.08]";
+
+          if (credential.href) {
+            return (
+              <a
+                key={credential.title}
+                href={credential.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${credential.title} — view profile (opens in a new tab)`}
+                title="View Robert L. Young's QuickBooks ProAdvisor profile"
+                className={`${cardClassName} cursor-pointer hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apex-gold focus-visible:ring-offset-2 focus-visible:ring-offset-apex-navy`}
+              >
+                {content}
+              </a>
+            );
+          }
+
+          return (
+            <div
+              key={credential.title}
+              className={cardClassName}
+            >
+              {content}
             </div>
           );
         })}
