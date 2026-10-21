@@ -1,3 +1,4 @@
+
 import Heading from "../../UI/Heading/Heading";
 import Reveal from "../../UI/Reveal/Reveal";
 import Section from "../../UI/Section/Section";
@@ -82,13 +83,13 @@ export default function About() {
           <Reveal animation="up" delay={100}>
             <div className="mt-8 border-l-2 border-apex-gold pl-6 sm:pl-8">
               <p className="text-lg leading-8 text-slate-700">
-                For more than{" "}
+                With{" "}
                 <strong className="text-apex-navy">
-                  23 years
+                  more than 24 years of accounting and financial management experience
                 </strong>
-                , Robert L. Young has built a career in Arkansas governmental
-                accounting, progressing from hands-on accounting roles into
-                financial management and supervisory leadership.
+                , Robert L. Young has built a career grounded in Arkansas
+                governmental accounting, progressing from hands-on accounting
+                roles into financial management and supervisory leadership.
               </p>
 
               <p className="mt-6 text-lg leading-8 text-slate-700">
