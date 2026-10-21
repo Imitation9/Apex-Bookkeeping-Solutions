@@ -44,7 +44,7 @@ const businessPackages = [
     name: "Essential Books",
     description:
       "For businesses that need clean, reconciled monthly books and reliable financial statements.",
-    price: "Starting around $350/month",
+    price: "Starting around $300/month",
     features: [
       "Monthly transaction categorization",
       "Bank and credit card reconciliations",
