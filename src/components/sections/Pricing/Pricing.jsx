@@ -3,7 +3,7 @@ const nonprofitPackages = [
     name: "Nonprofit Essentials",
     description:
       "For smaller organizations that need dependable monthly financials.",
-    price: "Starting around $450/month",
+    price: "Starting at $450/month",
     features: [
       "Monthly reconciliations",
       "Financial statements",
@@ -44,7 +44,7 @@ const businessPackages = [
     name: "Essential Books",
     description:
       "For businesses that need clean, reconciled monthly books and reliable financial statements.",
-    price: "Starting around $300/month",
+    price: "Starting at $300/month",
     features: [
       "Monthly transaction categorization",
       "Bank and credit card reconciliations",
