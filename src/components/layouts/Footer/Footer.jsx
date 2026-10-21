@@ -1,11 +1,39 @@
+
 import {
   CalendarDays,
+  Facebook,
+  Linkedin,
   MapPin,
   Phone,
+  ExternalLink,
+  BadgeCheck,
 } from "lucide-react";
 
 import { SITE } from "../../../config/site";
 import { footerNavigation } from "../../../data/footerNavigation";
+
+const professionalLinks = [
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/profile.php?id=61594666475790",
+    icon: Facebook,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/apex-bookkeeping-solutionsllc/",
+    icon: Linkedin,
+  },
+  {
+    label: "Google Business",
+    href: "https://share.google/4hT1i7qFY2d6TT227",
+    icon: ExternalLink,
+  },
+  {
+    label: "QuickBooks ProAdvisor",
+    href: "https://proadvisor.intuit.com/app/accountant/search?searchId=0te3iasyxzxs",
+    icon: BadgeCheck,
+  },
+];
 
 export default function Footer() {
   return (
@@ -65,6 +93,37 @@ export default function Footer() {
               </span>
 
               <span>{SITE.location}</span>
+            </div>
+          </div>
+
+          <div className="mt-8">
+            <p className="text-sm font-bold uppercase tracking-[0.16em] text-apex-gold-light">
+              Connect With Apex
+            </p>
+
+            <div className="mt-4 flex flex-wrap gap-3">
+              {professionalLinks.map((link) => {
+                const Icon = link.icon;
+
+                return (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Visit Apex on ${link.label} (opens in a new tab)`}
+                    title={link.label}
+                    className="inline-flex min-h-11 items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-3 py-2 text-sm font-medium text-slate-200 transition-all duration-300 hover:-translate-y-0.5 hover:border-apex-gold hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apex-gold focus-visible:ring-offset-2 focus-visible:ring-offset-apex-navy"
+                  >
+                    <Icon
+                      size={18}
+                      strokeWidth={1.8}
+                      aria-hidden="true"
+                    />
+                    <span>{link.label}</span>
+                  </a>
+                );
+              })}
             </div>
           </div>
 
